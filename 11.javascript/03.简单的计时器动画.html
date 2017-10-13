@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        .one {
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+            position: absolute;
+            top: 50px;
+            left: 0;
+        }
+    </style>
+</head>
+<body>
+<input type="button" value="开始" id="start"/><br/><br/>
+<div class="one" id="box"></div>
+
+<script>
+var box=document.getElementById("box");
+    var leader=0;
+    var timer=null;
+    document.getElementById("start").onclick= function () {
+        clearInterval(timer);
+        timer=setInterval(function () {
+            leader++;
+            if(leader>=800){
+                clearInterval(timer);
+                box.style.left=800;
+            }else{
+                box.style.left=leader+'px';
+            }
+
+
+        },1);
+    }
+</script>
+</body>
+</html>
