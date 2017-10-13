@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    //1.数组的去重 - 数组去掉重复项   [0 ,1 ,0 ,1, 5, 7, 5, 1]
+//    var arr1= [0 ,1 ,0 ,1, 5, 7, 5, 1];
+//    var arr11=[];
+//    for(var i=0;i<arr1.length;i++){
+//        for(var j=0;j<arr1.length;j++){
+//            if(arr11[arr11.length]!=arr1[j]){
+//                arr11[arr11.length]=arr1[j];
+//            }
+//        }
+//    }
+//    console.log(arr11);
+
+    // 第二种
+    // var arr = [10 ,11 ,10 ,12, 51, 17, 51, 11];
+    // var arrrNew=[arr[0]];
+    // for(var i=1;i<arr.length;i++){
+    //     var flag=true;
+    //     for(var j=0;j<arrrNew.length;j++){
+    //         if(arr[i]==arrrNew[j]){
+    //             flag=false;
+    //             break;
+    //         }
+    // }
+    // if(flag==true){
+    //     arrrNew[arrrNew.length]=arr[i];
+    // }
+    // }
+    // console.log(arrrNew);
+
+
+    // function f1() {
+    //     this.age = 10;
+    // }
+    // var p2=new f1();
+    // console.log(p2.age)
+    
+    // function foo(){
+    //     this.age=10;
+    //     return this;
+    // }
+    // var p1=foo.call(null);
+    // console.log(p1.age);
+
+    // function f1() {
+    //     this.length = 3;
+    // }
+    // var p3=f1();
+    // console.log(p3.length);
+
+
+    var arr = [10 ,11 ,10 ,12, 51, 17, 51, 11]; //需要去重的数组
+    var arrNew = [arr[0]];
+    for(var i = 1 ; i < arr.length; i++){
+    for(var j = 0 ; j < arrNew.length; j++){
+        if(arr[i] == arrNew[j]){
+            break;
+        }
+    }
+    if(j == arrNew.length){
+        arrNew[arrNew.length] = arr[i];
+    }
+}
+console.log(arrNew);
+</script>

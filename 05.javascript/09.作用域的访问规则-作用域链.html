@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    //1.作用域链- 作用域是从里往外的。
+    //a.如果在一个作用域中访问/修改一个变量，这个作用域中有这个变量的声明（不管变量的声明在变量的使用前还是使用后），都不会上一个作用域中查找这个变量了.
+    //b.如果在一个作用域中访问一个变量，这个作用域中没有这个变量的声明，就会往上一级作用域查找有没有这个变量，如果找到了就直接使用这个变量的值； 假如上一级作用域也没有这个变量的声明，在往上找，直到找到全局为止，如果全局有，就使用全局变量的值； 假如全局也没有，就报错。
+    //c.假如是修改变量：假如这个作用域中没有这个变量的声明，就去上一级作用域中查找这个变量，如果找到了，就修改这个变量的值 ; 如果上一级也没有找到这个变量的声明，就继续往上一个作用域查找，直到全局作用域位置，假如在全局作用域中找到了这个变量的声明，就把全局作用域中的这个变量的值给修改了；  假如全局也没有，那么他就成为一个全局变量。
+
+     function text1(){
+         function text2(){
+             num1=100;
+             console.log(num1);
+         } 
+         text2();
+     }   
+     text1();
+    //  console.log(text1);
+
+</script>

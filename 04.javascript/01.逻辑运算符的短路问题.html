@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+
+</html>
+<script>
+    //1.引子
+    /*
+    var num1 = 10;
+    var num2 = 20;
+    var res = undefined && num1++; //先赋值后自增  
+    console.log(res); //undefined
+    console.log(num1); //10
+*/
+
+    //c.短路发生了之后，逻辑与表达式的结果是什么？
+    //找假，如果第一个表达式能够转换成false，那么逻辑与表达式的值就是第一个式子的值；
+    //  如果第一个表达式不能转换成false，那么这整个逻辑与表达式的结果就是第二个式子的值，不管第二个式子是什么。
+   /*
+    var num1 = 10;
+    var num2 = 20;
+    var res = num1 && num2;//会发生短路问题，因为&&两边或者有一边是：非直接布尔类型的值。
+    console.log(res);   //20
+*/
+
+
+
+    //3.逻辑或运算符的短路问题
+    //b.逻辑或运算符如果第一个式子就能决定结果，就不会执行第二个式子。
+//    var num1 = -10;
+//    var num2 = 20;
+//    var res = num1 || num2 > 0; //会发生短路问题
+//    console.log(res); //-10
+
+
+
+    //c.逻辑或运算符短路后，逻辑与表达式的结果是什么？
+    //找真，如果第一个式子能转换成true，那么这整个逻辑或表达式的值就是第一个式子的值，否则，那么这整个逻辑或表达式的值就是第二个式子的值，不管第二个式子是什么？
+//    var num1 = 10;
+//    var num2 = 20;
+//    var res = num1>0 || num2++ > 0; //会发生短路问题
+//    console.log(res);  //true
+//    console.log(num2);
+
+
+    //4.逻辑非没有短路问题
+
+</script>

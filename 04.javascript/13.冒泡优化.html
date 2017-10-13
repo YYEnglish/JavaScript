@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    var arr = [77,55,88,44,22,79];
+    var num;
+    var k=0;
+    for(var i=0;i<arr.length;i++){
+        for(var j=0;j<arr.length;j++){
+            if(arr[j]<arr[j+1]){
+                num=arr[j];
+                arr[j]=arr[j+1];
+                arr[j+1]=num;
+            }
+        }
+        k++;
+    }
+    console.log(arr);
+    console.log(k);
+
+    console.log("---------------------------------");
+    var arr = [77,55,88,44,22,79];
+    var k=0;
+    
+    for (var i=0;i<arr.length;i++){
+        var flag=true;
+        for(var j=0;j<arr.length;j++){
+            if(arr[j]<arr[j+1]){
+                var num1=arr[j];
+                arr[j]=arr[j+1];
+                arr[j+1]=num1;
+                flag=false;
+            }
+        }
+        k++;
+        if(flag==true){
+            break;
+        }
+    }
+    console.log(arr);
+    console.log(k);
+
+
+
+
+
+
+
+</script>

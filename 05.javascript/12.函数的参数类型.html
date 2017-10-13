@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+        //1.数据类型
+    //a.基本数据类型 栈中的
+//    var num1 = 10;
+//    var num2 = num1;
+//    num1 = 100;
+//    console.log(num2); //10
+
+
+       //b.复杂数据类型存在在堆中的
+//    var arr1 = [10,20,30,40];
+//    var arr2 = arr1;
+//    arr2[0] = 100;
+//    console.log(arr1[0]); //100
+
+
+ //2.函数的参数
+    //a.如果函数的参数是一个值类型。
+//    function test1(n1){
+//      n1 = 100;  //n1全局变量
+
+//      console.log(n1);
+//    }
+//    var num1 = 10;
+//    test1(num1);
+//    console.log(num1);//10
+
+
+    //b.如果函数的参数是一个引用类型。
+//    function test2(arr){
+//      arr[0] = 100;
+//    }
+//    var arr1 = [10,20,30,40];
+//    test2(arr1);
+//    console.log(arr1); //100
+
+
+
+       //c.如果希望函数里面不要修改引用类型的值，就可以传一个引用类型的副本到函数里面。
+       function test2(arr){
+      arr[0] = 100;
+    }
+
+    var arr1 = [10,20,30,40];
+
+//    var arrFZT = [];
+//    for(var i = 0 ; i < arr1.length; i++){
+//    	arrFZT[arrFZT.length] = arr1[i];
+//    }
+
+    var  arrFZT = arr1.slice(0); //把原来的数组arr1,复制一份。
+    console.log(arrFZT);
+    test2(arrFZT);
+
+
+    console.log(arr1[0]);
+</script>

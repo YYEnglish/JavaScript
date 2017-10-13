@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+        //1.对数组的元素进行排序
+    //冒泡排序
+    var arr = [77,55,88,44,22,79];
+   for (var i=0;i<arr.length;i++){
+       for(var j=0;j<arr.length;j++){
+           if(arr[j]>arr[j+1]){
+               var num=arr[j];
+               arr[j]=arr[j+1];
+               arr[j+1]=num;
+           }
+       }
+   }
+   console.log(arr);
+   
+</script>

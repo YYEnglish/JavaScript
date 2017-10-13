@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+        //案例1
+        //    {
+        //        var num = 5;
+        //    }
+        //    console.log(num);  //5
+
+
+    //案例2
+        //    var num = 5;
+        //    if (num > 3) {
+        //        var sum = 7;
+        //    }
+        //    console.log(sum);  //7
+
+       //案例3  其它语言中变量i只能在for循环内部访问（局部变量）
+        //    for (var i = 0; i < 10; i++) {
+
+        //    }
+        //    console.log(i);
+
+               //案例4 全局变量
+        //    var name = "zs";
+        //    function f() {
+        //        name = "ww";
+        //    }
+        //    f();
+        //    console.log(name); //ww
+
+               //案例5 局部变量,现在函数内部的作用域找变量name，如果找到则使用，如果找不到去父级作用域找name变量
+        //    function f() {
+        //        var name1 = "zs";
+        //    }
+        //    f();
+        //    console.log(name1); //报错
+
+               //案例6 作用域链
+//    var color = "red";
+//    function getColor() {
+//      var anotherColor = "blue";
+//      function swapColor() {
+//        var tmpColor = color;
+//        color = anotherColor;
+//        anotherColor = tmpColor;
+//      }
+//      swapColor();
+//      console.log("anotherColor = "+anotherColor);  //red
+//    }
+//    getColor();
+//    console.log(color); //blue
+
+
+//      //分析第一题，预解析后
+//    var num;
+//    function fun(){
+//      var num;
+//      //------------
+//      console.log(num);
+//      num = 20;
+//    }
+//    //------------
+//    num = 10;
+//    fun();  //undefined
+
+// //    1、-----------------------------------
+
+//    var num = 10;
+//    fun();
+//    function fun(){
+//      console.log(num);  //undefined
+//      var num = 20;
+//    }
+
+
+
+    //分析第2题，预解析后的样子
+//    var a;
+//    function f1(){
+//      var b;
+//      var a;
+//      //----------------
+//      b=9;
+//      console.log(a);
+//      console.log(b);
+//      a = '123';
+//    }
+//    //------------------
+//    a = 18;
+//    f1();  //a=undefined  b=9
+
+
+// //    2、-----------------------------------
+//    var a = 18;
+//    f1();  //a=undefined  b=9
+//    function f1(){
+//      var b=9;
+//      console.log(a);
+//      console.log(b);
+//      var a = '123';
+//    }
+
+
+
+
+//分析第3题，预解析后的样子
+//    function f1(){
+//      var a;
+//      //----------------
+//      a = 9;
+//      b = 9;
+//      c = 9;
+//      //var a = b = c = 9;
+//      //var a = 9;
+//      //b = 9;
+//      //c = 9;
+//      console.log(a); //9
+//      console.log(b); //9
+//      console.log(c); //9
+//    }
+//    //-------------------------
+//    f1();
+//    console.log(c); //9
+//    console.log(b); //9
+//    console.log(a); //报错
+
+
+
+
+//    f1();
+//     console.log(c);
+//     console.log(b);
+//     console.log(a);
+//     function f1(){
+//       var a = b = c = 9;
+//       console.log(a);
+//       console.log(b);
+//       console.log(c);
+//     }
+
+
+</script>

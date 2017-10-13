@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+</body>
+</html>
+<script>
+        //1.数组的长度，就是数组中元素的个数.也就是数组中保存数据的个数。
+
+            //2.可以用length来获取数组的长度。
+            // var arr1=[1,2,3,4,5,6,7,8,9];
+            // console.log(arr1.length);
+
+                //3.可以对length做修改，从而更改数组的长度
+                // var arr2=[1,2,3,4,56,88,5];
+                // arr2.length = 10; //把数组的长度给修改了，改大了
+                // console.log(arr2.length);
+                // arr2.length = 5;
+                // console.log(arr2[7]);  //undefined
+                // console.log(arr2[5]);  //undefined
+                // console.log(arr2[2]);   // 3
+                // 如果把一个数组的长度给改小了，那么会丢失元素，并且是不可逆的。
+                
+
+                // 清空数组
+                 //a.既然修改改小了数组的长度，可以丢失数组的元素，把一个数组的长度改为0.
+                 //    var arr3 = [10,20,30,40,50];
+                //    arr3.length = 0; //清空数组
+
+                    //b.让一个数组等于一个空数组。
+                    //    var arr4 = [10,20,30,40,50];
+                    //    arr4 = []; //让arr4不再指向那个有值的数组，而是指向一个空数组。
+
+
+
+                        //5.可以利用数组的长度lenght，来添加新元素。
+                        // var arr5 = [10,20,30]; //数组的元素3个，长度是3
+                        //新增元素
+                    //    arr5[3] = 40; //这里的下标3刚好等于长度3，所以用长度来替换这个3.就是下面这一句代码。
+                        // arr5[arr5.length] = 40; // [10,20,30,40],他的长度也是4.
+                        //新增元素
+                    //    arr5[4] = 50; //这里的下标4刚好等于此时数组的长度，所以用下面这句话替换。
+                        // arr5[arr5.length] = 50; //[10,20,30,40,50]  长度是5
+                        //新增元素
+                    //    arr5[5] = 60; //这里的下标5刚好等于此时数组的长度，所以用下面这句话替换。
+                        // arr5[arr5.length] = 60;  //[10,20,30,40,50,60]
+                        // console.log(arr5);
+
+                        
+                        //6.js中数组特点：
+                        //a.数组的长度是动态改变的。
+                        //b.数组的元素可以是任意类型
+                    //    var arr6 = [10,"abc",true, function () {alert("哈哈");} , arr5 ];
+                    //    console.log(arr6);
+                        //但是建议不要这样做，最好是数组里面的元素里面的类型一致。
+
+
+</script>

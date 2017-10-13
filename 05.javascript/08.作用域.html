@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    //1.作用域   起作用的区域区间
+    //a.全局作用域: script标签里面，所有的函数外面.
+    //b.局部作用域: 任意的函数里面。
+    //注意：在js中，只有函数才能分割作用域。
+
+    //2.变量
+    //全局变量：如果变量声明在全局作用域中，就是一个全局变量。
+    //可以在程序的任意地方被访问，括号函数。
+    //只有等到程序结束的时候才会被回收。
+
+
+    //局部变量：如果变量声明在局部作用域(函数)中，就是一个局部变量。
+    //之能在声明他的那个函数中被访问。
+    //声明他的函数执行完了，就被回收了。
+
+    //    var num1 = 10; //全局变量
+    //    console.log(num1); //10
+    //
+    //    function test1(n1,n2){
+    //      var num2 = 20; //局部变量
+    //      console.log(num2);//20  函数内部访问局部变量
+    //      console.log(num1); //10  函数内部可以访问全局变量
+    //    }
+    //    test1();//调用函数
+    //
+    //    console.log(num1); //10 访问全局变量。
+    //    console.log(num2); //报错了num2 is not defined   想法是访问函数中的局部变量，但是访问不了
+
+    // var num1=10,num2=20,num3=30;
+
+       //b.变量的不规则声明:
+    //b.1   num1 = 10; //不用var
+
+            // num1=20;
+            // console.log(num1);
+            
+    //    num1 = 10; //不用var声明变量，声明在全局作用域中。
+    //    console.log(num1); //10
+    //    function test2(){
+    //      console.log(num1); //10
+    //    }
+    //    test2();
+    //    console.log(num1); //10
+
+
+        // function a(){
+        //     var num=20;
+        //     console.log(num);
+        // }
+        // a();
+        // // console.log(num);  //num is not defined
+        // function b(){
+        //     num2=30;
+        //     console.log(num2);
+        // }
+        // b();
+        // console.log(num2);  //30
+
+
+            var num1=num2=num3=10;
+   function sb1(){
+   	console.log(num1);///10
+   	console.log(num2);///10
+   	console.log(num3);///10
+   }
+   sb1();
+   console.log(num1);///10
+   console.log(num2);///10
+   console.log(num3);///10
+
+console.log('------------');
+   function sb2(){
+       var num1 = num2 = num3 = 10;
+       console.log(num1);
+       console.log(num2);
+       console.log(num3);
+    }
+    sb2();
+    console.log(num3);
+    console.log(num2);
+    console.log(num1);
+
+//    console.log(Array.constructor==Function);
+//    console.log(Array.constructor==Function.constructor);
+//    console.log(Function==Function.constructor);
+
+//    console.log(Object.constructor==Array.constructor);
+//    console.log(Object.constructor==Function.constructor);
+//    console.log(Object.constructor==Function);
+
+</script>

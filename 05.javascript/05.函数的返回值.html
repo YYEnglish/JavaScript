@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+        //1.函数的返回值。
+    //function getSum(num1,num2){
+    //  var res = num1 + num2;
+    //  console.log(res); //结果不能有函数私自处理，要怎么处理决定权在于调用函数的人。
+    //}
+
+
+        //2.问题在于： 函数会得到一个结果，结果怎么处理？取决与调用函数的人。
+    //怎么把函数产生的结果给调用函数的人呢？
+    //使用return关键字 ，把结果返回。
+//    function getSum(num1,num2){
+//      var res = num1 + num2;
+//      return res;
+//    }
+// 调用函数直接得值
+
+
+function qiuhe(num1,num2) {
+    var xj=num1+num2;
+    return xj;
+  }
+  function qiucha(num1,num2) {
+      var xj=num1-num2;
+      return xj;
+    }
+    function qiuji(num1,num2){
+        var xc=num1*num2;
+        // return xc;
+
+    }
+    function qiushang(num1,num2){
+        var xc=num1/num2;
+        // return xc;
+        return;
+    }
+    var jia=qiuhe(10,20);
+    var jian=qiucha(10,20);
+    var cheng=qiuji(10,20);
+    var chu=qiushang(10,20);
+    console.log(jia,jian,cheng,chu);   //:51 30 -10 200 0.5
+
+
+    //4.返回值，总结
+    //a.如果函数中有return关键字，那么return关键字后面的代码是不会执行的。
+    //b.如果函数中有return关键字，并且这个关键字后面有值，函数的返回值就是这个值。
+    //c.如果函数中有return关键字,但是return关键字后面没有值，那函数的返回值是什么？undefined。
+    //d.如果函数中没有retrun关键字，函数有返回值吗？函数有默认的返回值undefined。
+    
+
+    //5.什么时候函数要写返回值呢？
+    //a.调用函数的人需要函数产生的结果。就要把函数的返回值给返回。
+    //b.可以在函数里面，用return关键字提前结束这个函数。
+
+        //7.
+    //三元运算符
+    var res=10>20? alert("false"):alert("true");
+
+       //8.函数的注释
+    /**
+     * @param 第一个参数
+     * @param 第二个参数
+     * @returns {*} //函数的返回值
+     */
+
+
+
+
+</script>

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+        //1.逻辑与运算符是一个短路运算，如果第一个表达式可以决定他的结果，就不会去计算第二个式子的值。
+        //    var num1 = 10;
+        //    var num2 = 20;
+        //    var res = num1 < 0 && num2++ >0;
+        // console.log(res);   //false
+
+           //2.逻辑与表达式的结果，不一定是布尔类型的值，有可能是其他的值。
+            //找假，如果表达式1能转换成false，那么整个逻辑与表达式的值就是第一个式子的值。
+            //    var num1 = undefined;
+            //    var num2 = 10;
+            //    var res = num1 && num2++;
+            //    console.log(res); //undefined
+            //    console.log(num2); //10
+
+            //如果表达式1不能转换成false，整个逻辑与表达式的值就是第二个式子的值。
+            //    var num1 = 10;
+            //    var num2 = 20;
+            //    var res = num1 && ++num2;
+            //    console.log(res);  //21
+            //    console.log(num2); //21
+
+            //3.逻辑或运算符也是短路运算，如果第一个式子能够决定整个逻辑或表达式的结果，那么就不会计算第二个式子的值。
+            //    var num1 = 10;
+            //    var num2 = 20;
+            //    var res = num1 >0 || num2++ >0;
+            //    console.log(res); //true
+            //    console.log(num2);//20
+
+            //4.逻辑或表达式的结果不一定的是布尔类型的值，有可能是其他的值。
+            //找真，如果第一个式子能够转换成true，那么整个逻辑或表达式的结果就是第一个式子的值。
+            //    var num1 = 10;
+            //    var num2 = 20;
+            //    var res = num1 || num2++;
+            //    console.log(res); //10
+            //    console.log(num2); //20
+
+            //如果第一个式子不能转换成true，那么整个逻辑或表达式的结果就是第二个式子的值。
+            //    var num1 = undefined;
+            //    var num2 = 10;
+            //    var res = num1 || ++num2;
+            //    console.log(res); //11
+            //    console.log(num2); //11
+
+
+            
+        //5.数组
+        //a.数组的声明
+        //    var arr1 = new Array();
+        //    var arr2 = new Array(10,29,39); //
+        //    var arr3 = [];
+        //    var arr4 = [10,20,30,40];
+
+        //b.数组元素的赋值
+        //    arr1[0] = 10;
+        //    arr2[3] = 20;   // arr2[2] = 100; //把原来下标为2的元素的值给修改了。
+        //    arr3[3] = 100;  //arr3的长度就是4，  取值arr3[2]的值是undefined。
+        //    arr4[4] = 100;
+
+        //c.数组的取值。
+        //    console.log(arr1[0]); //10
+        //    console.log(arr3[0]); //undefined
+
+        //d.数组的改值,对数组的元素重新赋值。
+        //    arr1[0] = 100;
+
+        //e.数组的长度- 数组中保存数据的个数，元素的个数，length。
+        //可以用length来获取数组的长度
+        //可以用lenght类设置数组的长度。 如果设置的新的数组的长度比原来的长度要小，是会不可逆的丢失数组的元素地。
+        //可以使用lengtg=0的方式来清空数组。
+        //可以使用length来添加新元素。
+
+
+
+
+        //练习题
+        //求整数数组中所有元素的和、平均值
+        var arr1=[1,2,3,4,5,6,7,8,9,12];
+        var num=0;
+        for(var i=0;i<arr1.length;i++){
+            num+=arr1[i];
+        }
+        console.log(num);    //  和  57
+        console.log(num/arr1.length);  // 平均值  5.7   
+        //length是数组的长度   个数  不需要减一
+
+            //求数组中的最大值、最小值
+            // console.log(Number.MAX_VALUE);//输出 1.7976931348623157e+308 
+            var num=-Infinity;
+            for(var i=0;i<arr1.length;i++){
+                if(arr1[i]>num){
+                    num=arr1[i];
+                }
+            }
+            console.log(num);  //  最大值  12
+            num=Infinity;
+            for(var i=0;i<arr1.length;i++){
+                if(num>arr1[i]){
+                    num=arr1[i];
+                }
+            } 
+            console.log(num);    //最小值   1
+
+            //将0-100所有整数放到数组中
+            var arr2=[];
+            for(var i=0;i<=100;i++){
+                arr2[i]=i;
+            }
+            console.log(arr2);
+
+            //    //将50-100所有整数放入到数组中
+            arr2=[];
+            for(var i=50;i<=100;i++){
+                arr2[arr2.length]=i;
+            }
+            console.log(arr2);
+
+            //将1-100之间能被3整除的数放入到数组中
+            arr2=[];
+            for(var i=0;i<100;i++){
+                if(i%3==0){
+                    arr2[arr2.length]=i;
+                }
+            }
+            console.log(arr2);
+            
+</script>

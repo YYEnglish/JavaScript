@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+      //1.数据类型  String Number Boolean undefined null  数组
+         //typeof能够检测的数据类型有哪些：string number boolean undefined 函数
+//             function test(){
+//      alert("哈哈");
+//    }
+//    console.log(typeof test);  //function
+
+var arr = [10,20,30];
+// console.log(typeof arr);   ///Object
+    //console.log(typeof arr); //object 使用typeof 数组 得到的是object。
+
+ //a. Array.isArray(需要检测的数组名);
+ console.log(Array.isArray(arr));   //true   判断是不是数组
+
+     //b.需要检测的数组名 instanceof Array;
+     console.log(arr instanceof Array);    //true    判断是不是数组
+
+         //补充：instanceof 还是检测函数
+         function qwe() {
+             conaole.log('hehe');
+           }
+           console.log(qwe instanceof Function);   //true  判断是不是函数
+
+    //补充：instanceof 还是检测对象
+    var obj = new Object();
+    console.log(obj instanceof Object);   //true   判断是不是对象
+
+
+    // Object.prototype.toString.call(需要监测的数组名)
+    console.log(Object.prototype.toString.call(arr));    //  "[object Array]"
+    console.log(typeof Object.prototype.toString.call(arr));    //string
+
+    
+    //补充 用这种方法可以检测所有的数据类型。
+    //console.log(Object.prototype.toString.call(null));  //"[object Null]"
+    //console.log(Object.prototype.toString.call(12)); //"[object Number]"
+    //console.log(Object.prototype.toString.call(undefined)); //[object Undefined]
+    //console.log(Object.prototype.toString.call(true));  //[object Boolean]
+    //console.log(Object.prototype.toString.call("123")); //[object String]
+    //function test2 (){
+    //  console.log("嘿嘿");
+    //}
+    //console.log(Object.prototype.toString.call(test2)); //[object Function]
+    //var obj2 = new Object();
+    //console.log(Object.prototype.toString.call(obj2)); //[object Object]
+
+
+
+
+
+
+
+</script>

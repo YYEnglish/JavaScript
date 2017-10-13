@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+      //2.找出100内所有的素数(素数/质数，只能被1和本身整除),并统计出素数的个数  //13  2-12      12合数  2-11
+    //1既不是素数也不是合数。
+    //不管是什么数， 都不可能被  大于他一半的数 整数。 //
+ var arr=[];
+ for (var i=2;i<=100;i++){
+    //  假设i是素数
+    var flag=true; //做判断用
+
+    // 判断假设是否成立
+    for (var j=2;j<=i/2;j++){   //j<=i/2   减少循环次数
+        if(i%j==0){
+            flag=false;
+            break;
+        }
+    }
+    if(flag){
+        console.log(i);
+        arr[arr.length]=i;
+    }
+ }
+ console.log(arr);
+ console.log(arr.length);
+</script>
