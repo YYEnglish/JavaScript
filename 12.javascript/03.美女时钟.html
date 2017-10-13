@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+<img id="img" src="" alt=""/>
+<script>
+//    var imgs=document.getElementById("img");
+//    var ss=0;
+//    var sss=0;
+//    timeid=setInterval(function () {
+//        if(ss<10){
+//            sss="0"+ss;
+//        }else{
+//            sss=ss;
+//        }
+//        imgs.src="meimei/00_"+sss+".jpg";
+//        ss+=1;
+//        if(ss>59){
+//            ss=0;
+//        }
+//    },1000);
+//获取元素
+    var pic=id('img');
+//    页面一打开就要出现图片
+    showCirl();
+    function showGirl(){
+        var date=new Date();
+        var hour=date.getHours();
+        var min=date.getMinutes();
+        var sec=date.getSeconds();
+        if(hour<10){
+            hour="0"+hour;
+        }
+        if(min<10){
+            min="0"+min;
+        }
+        if(sec<10){
+            sec="0"+sec;
+        }
+//        根据当前系统时间拼接字符串
+        var str=hour+"_"+sec+".jpg";
+        pic.src="meiemi/"+str;
+
+    }
+    setInterval(showGirl,1000);
+</script>
+</body>
+</html>

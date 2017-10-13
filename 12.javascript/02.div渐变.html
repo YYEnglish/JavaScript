@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        div{
+            width: 100px;
+            height: 100px;
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+<button id="findin">消失</button>
+<button id="findout">出现</button>
+<div id="one"></div>
+<script>
+    function id(id){
+        return document.getElementById(id);
+    }
+    var findi=id("findin");
+    var findo=id("findout");
+    var one=id('one');
+    var temp=1;
+    var timeid=null;
+
+    findi.onclick= function () {
+        clearInterval(timeid);
+        timeid=setInterval(function () {
+            temp-=0.1;
+            if(temp<0){
+                one.style.opacity=0;
+                clearInterval(timeid);
+            }else{
+                one.style.opacity=temp;
+            }
+        },100);
+    }
+    findo.onclick= function () {
+        clearInterval(timeid);
+        timeid=setInterval(function () {
+            temp+=0.1;
+            if(temp>1){
+                one.style.opacity=1;
+                clearInterval(timeid);
+            }else{
+                one.style.opacity=temp;
+            }
+        },100)
+    }
+</script>
+</body>
+</html>

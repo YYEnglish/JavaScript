@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        .main,table {
+            width: 800px;
+            margin: 0 auto;
+        }
+        .main {
+            height: 40px;
+            line-height: 40px;
+        }
+        table , th ,td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+        .optd {
+            width: 200px;
+        }
+        .addTable {
+            width: 780px;
+            padding: 10px;
+            border: 1px solid green;
+            position: fixed;
+            top: 200px;
+            left: 50%;
+            margin-left: -400px;
+            background-color: #fff;
+            display: none;
+        }
+        .addTable table {
+            width: 100%;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+<div class="main">
+    <input type="button" value="新增一行" id="add"/>
+</div>
+<table id="table">
+
+</table>
+<!--用于新增表格获取数据的模块-->
+<div class="addTable" id="addRow">
+    <table>
+        <tr>
+            <th>学号</th>
+            <th>姓名</th>
+            <th>性别</th>
+            <th>年龄</th>
+        </tr>
+        <tr>
+            <td><input type="text" id="number"/></td>
+            <td><input type="text" id="name"/></td>
+            <td>
+                <select id="gender">
+                    <option >男</option>
+                    <option >女</option>
+                </select>
+            </td>
+            <td><input type="text" id="age"/></td>
+        </tr>
+    </table>
+
+    <div>
+        <input type="button" value="确定" id="sure"/>
+        <input type="button" value="取消" id="cancle"/>
+    </div>
+</div>
+<script>
+    function id(id){
+        return document.getElementById(id);
+    }
+    function getText(ele){
+        if(typeof ele.textContent=="string"){
+            return ele.textContent;
+        }else{
+            return ele.innerText;
+        }
+    }
+    function setText(ele,text){
+        if(typeof ele.textContent=="string"){
+            ele.textContent=text;
+        }else{
+            ele.innerText=text;
+        }
+    }
+    var head = ["学号","姓名","性别","年龄","操作"];
+    var data = [
+        {"number":"001","name":"李狗蛋","gender":"男","age":16},
+        {"number":"002","name":"王大柱","gender":"女","age":17},
+        {"number":"003","name":"李葫芦","gender":"男","age":15},
+        {"number":"004","name":"小明","gender":"男","age":18},
+        {"number":"005","name":"小红","gender":"女","age":16}
+    ];
+    var table=id("table");
+    var headers=document.createElement("tr");
+    table.appendChild(headers);
+    for (var i=0;i<head.length;i++){
+        var th=document.createElement('th');
+        setText(th,head[i]);
+        headers.appendChild(th);
+    }
+
+    for (var i=0;i<data.length;i++){
+        var tr=createRow(data[i]);
+        table.appendChild(tr);
+    }
+
+    function
+</script>
+</body>
+</html>

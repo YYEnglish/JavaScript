@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        .clock {
+            width: 600px;
+            height: 600px;
+            margin: 100px auto;
+            background: url(images/clock.jpg) no-repeat;
+            position: relative;
+        }
+
+        .clock div {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url(images/hour.png) no-repeat center center;
+        }
+
+        #m {
+            background-image: url(images/minute.png);
+        }
+
+        #s {
+            background-image: url(images/second.png);
+        }
+    </style>
+</head>
+<body>
+<div class="clock">
+    <div id="h"></div>
+    <div id="m"></div>
+    <div id="s"></div>
+</div>
+<script>
+    //transform: rotate(6deg);//旋转多少度
+    //获取当前时间 根据时间 计算旋转角度
+    //1秒钟是 旋转 6度。
+    //1分钟是 旋转 6度。
+    //1小时是 旋转 30度。
+function id(id){
+    return document.getElementById(id);
+}
+
+
+    //1.获取元素
+    var divH = id("h");
+    var divM = id("m");
+    var divS = id("s");
+    showClock();
+    function showClock(){
+        var date=new Date();
+        var HH=date.getHours();
+        var MM=date.getMinutes();
+        var SS=date.getSeconds();
+        var MILL=date.getMilliseconds();
+        var rH=(HH+MM/60)*30;
+        var rM=(MM+SS/60)*6;
+        var rS=(SS+MILL/1000)*6;
+        divH.style.transform="rotate("+rH+"deg)";
+        divM.style.transform="rotate("+rM+"deg)";
+        divS.style.transform="rotate("+rS+"deg)";
+    }
+    setInterval(showClock,100);
+    </script>
+</body>
+</html>

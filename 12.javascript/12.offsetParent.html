@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>标题</title>
+    <style>
+        .one {
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+            position: fixed;
+            top: 0px;
+            left: 0px;
+        }
+        .father {
+            width: 300px;
+            height: 300px;
+            background-color: skyblue;
+            position: relative;
+            top: 0px;
+            left: 0px;
+        }
+        .test {
+            width: 400px;
+            height: 400px;
+            background-color: blueviolet;
+            /*position:  relative;*/
+            /*top: 0px;*/
+            /*left: 0px;*/
+        }
+    </style>
+</head>
+<body>
+<!--<div class="test" id="test">-->
+<div class="father" id="father">
+    <div class="one" id="box"></div>
+</div>
+</div>
+<script>
+
+//    offsetParent  是定位父级
+
+//    元素的offsetParent是离这个元素最近的父级元素；
+
+//    如果他的父级元素都没有定位那么他的offsetParent是body
+
+//    如果他没有父级元素那么他的父级元素是body
+
+//    如果自己是固定定位 那么他的offsetParent是null
+
+
+
+var box = document.getElementById("box");
+console.log(box.offsetParent);
+
+
+
+</script>
+</body>
+</html>

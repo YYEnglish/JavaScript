@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>标题</title>
+    <style>
+        .father {
+            width: 400px;
+            height: 400px;
+            background-color: skyblue;
+            position: relative;
+            top: 0px;
+            left: 0px;
+        }
+        .son {
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+        }
+    </style>
+</head>
+<body>
+<div class="father" id="father">
+    <div class="son" id="son"></div>
+</div>
+<input type="button" id="btn" value="按钮"/>
+
+<script>
+
+var son=document.getElementById("son");
+    document.getElementById("btn").onclick= function () {
+        var temp=0;
+        setInterval(function () {
+            temp+=1;
+            son.style.left=temp+'px';
+
+        },10);
+    }
+</script>
+</body>
+</html>

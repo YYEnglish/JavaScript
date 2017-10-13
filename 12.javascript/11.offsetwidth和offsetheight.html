@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        .one {
+            /*width: 100px;*/
+            /*height: 100px;*/
+            /*border: 10px solid green;*/
+            /*padding: 10px;*/
+            background-color: pink;
+        }
+
+    </style>
+</head>
+<body>
+<div class="one" id="box" style="width: 100px ;height: 100px;padding: 10px;border: 10px solid green; margin: 10px"></div>
+<script>
+//    offset家族
+//    offsetWidth  offsetHeight
+//    offsetLeft  offsetright
+
+
+    //---------------------------
+//    计算盒子的大小：包含边框  包含内边距   包含内容
+
+//    offsetWidth   offsetHeight
+//    能够获取到元素的宽和高
+//    包含padding
+//    包含border
+//    不包含margin
+
+//    style.width    style.height
+//    只能获取设置行内的样式的宽和高
+//    不包含padding  margin  border
+
+    var box =document.getElementById("box");
+console.log(box.offsetWidth);
+console.log(typeof box.offsetWidth);  //number
+console.log(box.offsetHeight);
+console.log(typeof box.offsetHeight);  //number
+
+
+console.log("-------------------------------------");
+
+console.log(box.style.width);
+console.log(typeof box.style.width); //string
+console.log(box.style.height);
+console.log(typeof box.style.height); //string
+</script>
+</body>
+</html>

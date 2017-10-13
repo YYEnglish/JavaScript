@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>标题</title>
+    <style>
+        .one {
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+            /*transform: rotate(45deg) ;*/
+        }
+    </style>
+
+</head>
+<body>
+<input type="button" value="旋转" id="btn"/><br/><br/><br/>
+<div class="one" id="box">7</div>
+
+<script>
+    //1.元素
+    var btn = document.getElementById("btn");
+    var box = document.getElementById("box");
+    var xz=0;
+    btn.onclick= function () {
+        xz+=45;
+        box.style.transform="rotate("+xz+"deg)";
+
+
+    }
+</script>
+</body>
+</html>
