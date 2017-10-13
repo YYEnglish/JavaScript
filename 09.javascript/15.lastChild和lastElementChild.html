@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<ul id="ul1">
+  <li>我是第1个li标签</li>
+  <li>我是第2个li标签</li>
+  <li>我是第3个li标签</li>
+  <li>我是第4个li标签</li>
+  <li>我是第5个li标签</li>
+  <!--哈哈-->
+  哈哈
+</ul>
+<script>
+    var ul1=document.getElementById('ul1');
+    // console.log(ul1.lastChild);
+    // console.log(ul1.lastElementChild);
+
+    function lastElement(ele){
+        if(ele.lastElementChild){
+            return ele.lastElementChild;
+        }else{
+            var node=ele.lastChild;
+            return node.nodeType!=1?node.lastChild:node;
+        }
+    }
+    console.log(lastElement(ul1));
+    
+</script>
+</body>
+</html>
