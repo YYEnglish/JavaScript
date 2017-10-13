@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .one{
+            width:100px;
+            height: 100px;
+            background-color: pink;
+            position: relative;
+        }
+        .two{
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+            position: absolute;
+            left:100px;
+        }
+        .show{
+            display: block;
+        }
+        .hide{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div id="one" class="one">
+        <div id="two" class="two hide"></div>
+    </div>
+<script>
+    
+    var one=document.getElementById('one');
+    var two=document.getElementById('two');
+    one.onmouseover=function(){
+        two.className=two.className.replace("hide","show");
+    }
+    one.onmouseout=function(){
+        two.className=two.className.replace("show","hide");
+    }
+</script>
+</body>
+</html>

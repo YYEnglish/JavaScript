@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+        //1.学生(姓名、年龄、性别、成绩、打招呼的行为)。
+
+    //var s1 = new Object();
+    //s1.name = "张三";
+    //s1.age = 18;
+    //s1.gender =true;
+    //s1.score = 100;
+    //s1.sayHi = function () {
+    //  console.log("我的名字是"+this.name+",我的年龄是"+this.age);
+    //}
+    //
+    //
+    //var s2 = new Object();
+    //s2.name = "李四";
+    //s2.age = 19;
+    //s2.gender = false;
+    //s2.score = 99;
+    //s2.sayHi = function () {
+    //  console.log("我的名字是"+this.name+",我的年龄是"+this.age);
+    //}
+
+    //2.把以上的创建学生对象的代码封装成一个函数。
+
+
+    function student(name,age,sayHi){
+       var s2= new Object ();
+       s2.name = name;
+       s2.age = age;
+       s2.sayHi = function () {
+           console.log("aoshc");
+       }
+       return s2;
+    }
+
+
+        //调用函数，得到一个学生对象
+        var o1 =  createStudent("张三",18,true,100);
+    o1.sayHi();
+
+    //调用函数，得到一个学生对象
+    var o2 = createStudent("李四",20,false,99);
+    o2.sayHi();
+
+</script>

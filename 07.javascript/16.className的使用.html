@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+            .sb {
+              font-size: 30px;
+            }
+            .two {
+              width: 200px;
+              height: 200px;
+              background-color: red;
+            }
+          </style>
+</head>
+<body>
+        <div class="sb" id="one">我是一个div</div>
+        <p class="one">我是一个p</p>
+        <script>
+              //1.根据id获取元素
+  var box1 = document.getElementById("one");
+  //2.根据标签名获取元素
+  //var boxs = document.getElementsByTagName("div");
+  //获取元素的类名。
+  //console.log(box1.className); //由于class是一个关键字，所以要用className来获取元素的类名。
+
+  //3.根据类名来获取元素
+  // 一般的不用，因为ie8和他之前不支持这个方法。并且类是给css用的，而id才是给js用的。
+  //var boxs = document.getElementsByClassName("one");
+  //console.log(boxs);
+
+
+  //4.设置id为one的那个div的样式
+  //这样设置的样式是属于行内样式。
+  //box1.style.width = "100px";
+  //box1.style.height="100px";
+  //box1.style.backgroundColor = "pink";
+
+  //box1.className = "two";
+  //box1.className = "sb two";
+  box1.className += " two";
+        </script>
+</body>
+</html>

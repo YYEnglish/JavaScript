@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+        var head = ["编号","姓名","性别","年龄","成绩"];
+    //datas是一个数组，只不过他的元素是一个个的json
+    var datas=[
+    {"bianHao":1,"name":"张三","gender":"男","age":18,"score":100},
+      {"bianHao":2,"name":"利群","gender":"女","age":28,"score":7},
+      {"bianHao":3,"name":"群姐","gender":"男","age":38,"score":6},
+      {"bianHao":4,"name":"平哥","gender":"男","age":28,"score":80},
+      {"bianHao":5,"name":"王哥","gender":"男","age":38,"score":80}
+    ];
+    
+
+    //2.根据上面的数据创建表格
+    document.write("<table>");
+    //2.1创建表头
+    document.write("<thead><tr>");
+    //根据head数组里面的元素的个数来创建th。
+    for(var i = 0 ; i < head.length; i++){
+    	document.write("<th>");
+        document.write(head[i]);
+    	document.write("</th>");
+    }
+    document.write("</tr></thead>");
+    //2.2创建主体部分
+    document.write("<tbody>");
+    //遍历datas那个数组，他的元素有多少个，就应该创建多少个tr
+    for(var i = 0 ; i < datas.length; i++){
+    	document.write("<tr>");
+        //要创建多少个td? 取决于json数据（datas数组的元素） 有多少个键值对。
+        for(var key in datas[i] ){
+          //创建td
+          document.write("<td>");
+          document.write(datas[i][key] );
+          document.write("</td>");
+        }
+    	document.write("</tr>");
+    }
+    document.write("</tbody>");
+    document.write("</table>");
+
+</script>

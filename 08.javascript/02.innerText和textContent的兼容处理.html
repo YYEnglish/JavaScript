@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+        <div class="one" id="one">我是一个div</div>
+</body>
+</html>
+<script>
+    function getText(ele){
+            //能力检测，判断执行当前这个代码的浏览器是否能使用textContent
+     if(typeof ele.textContent=="string"){
+         return ele.textContent;
+     }else{
+        return ele.innerText;
+     }
+        }
+
+
+        function setText(ele,text){
+            if(typeof ele.textContent=="string"){
+                ele.textContent=text;
+            }else{
+                ele.innerText=text;
+            }
+        }
+</script>

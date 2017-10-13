@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+        用户名:<input type="text" id="userName"/> <br/>
+        密码：<input type="password" id="password"/> <br/>
+        <input type="button" id="login" value="登录"/>
+        <script>
+            function id(id){
+                return document.getElementById(id);
+            }
+            var UN=id('userName');
+            var pd=id('password');
+            var lg= id('login');
+            lg.onclick=function(){
+                if(UN.value.length<6 || pd.value.length<6){
+                    alert('ndvs');
+                }
+            }
+
+
+              //字符串的长度是可以通过length来获取的。
+  //var str1 = "abcdefgh";
+  //console.log(str1.length);
+        </script>
+</body>
+</html>

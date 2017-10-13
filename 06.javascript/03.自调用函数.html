@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+        //1.匿名函数- 没有名字的函数
+    //function (){
+    //  console.log("呵呵");
+    //}
+
+    //2.匿名函数不能声明后再次被调用。
+
+
+    //3.匿名函数自己调用自己- 自调用函数
+    //a.推荐使用
+    (function (){
+        console.log("hausc");
+    }());
+    (function (){
+        console.log('123');
+    })();
+        //4.什么时候用自调用函数
+    //a.如果要写一个只执行一次的函数，就可以写一个自调用函数。
+    //b.js中只能有函数分割作用域。  自调用函数用来分割作用域。
+</script>

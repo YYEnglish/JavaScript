@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+        <style>
+
+        .small {
+            width: 180px;
+        }
+
+        li {
+            float: left;
+            list-style: none;
+            margin-right: 20px;
+        }
+        ul {
+            width: 1000px;
+            margin: 0 auto;
+
+            height: 160px;
+
+        }
+        .father {
+            width: 1000px;
+            margin: 0 auto;
+        }
+        .father #bigPic {
+            width: 1000px;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li><a href="../images/01.jpg"><img src="../images/01.jpg" alt="" class="small"/></a></li>
+        <li><a href="../images/02.jpg"><img src="../images/02.jpg" alt="" class="small"/></a></li>
+        <li><a href="../images/03.jpg"><img src="../images/03.jpg" alt="" class="small"/></a></li>
+        <li><a href="../images/04.jpg"><img src="../images/04.jpg" alt="" class="small"/></a></li>
+        <li><a href="../images/05.jpg"><img src="../images/05.jpg" alt="" class="small"/></a></li>
+    </ul>
+    <script>
+        var bigPic=document.getElementById("bigPic");
+        var links= document.getElementsByTagName('a');
+        for ( var i=0;i<links.length;i++){
+            links[i].onclick=function(){
+                //设置img那个标签的src属性的值等于被单击的当前这个a标签的href属性的值。
+                bigPic.src=this.href;
+                return false;
+            }
+        }
+        
+    </script>
+</body>
+</html>

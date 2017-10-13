@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+        //1. new 关键字 做了什么？
+    //a.帮我们创建了一个对象
+    //b.将this执向当前的对象。
+    //c.给对象的属性赋值
+    //d.把创建的对象给返回了
+
+    function text (){
+
+    }
+    var sb = new text();
+    console.log(typeof sb);  //Object
+
+
+
+    
+    //2.自定义的构造函数。
+    //构造函数取名 （名词，首字母大写）
+    function test (name,age){
+        this.name=name;
+        this.age=age;
+        this.sayHi=function(){
+            console.log("scjcoh");
+        }
+    }
+    var st = new test('小明',18);
+    console.log(st);
+    o1.sayHi();
+
+    console.log(st.name);
+</script>

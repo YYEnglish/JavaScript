@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <ul id="ul1">
+        <li>我是第1个li标签</li>
+        <li>我是第2个li标签</li>
+        <li>我是第3个li标签</li>
+        <li>我是第4个li标签</li>
+        <li>我是第5个li标签</li>
+        <li>我是第6个li标签</li>
+      </ul>
+      
+      <div></div>
+      <div></div>
+      <div></div>
+      
+      
+      <p></p>
+      
+</body>
+</html>
+<script>
+      //需求获取这些个li标签
+
+  //1.可以通过标签名获取。
+  //返回的是一个伪数组，里面存放的就是获取到的这些标签们。
+//   var lis=document.getElementsByTagName("li");//document.getElementsByTagName
+//    console.log(lis);
+// //   lis.slice();//报错了，因为lis是一个伪数组
+//   console.log(lis[0]);
+
+//   for(var i = 0 ; i < lis.length; i++){
+//   	console.log(lis[i]);
+//   }
+
+
+  //2.根据标签名获取元素们
+  //var divs = document.getElementsByTagName("div");
+  //console.log(divs);
+
+    //3.注意- 根据TagName获取到的元素返回的始终是数组，如果只有一个元素，就表示数组中只有一个值。
+//     var p1 = document.getElementsByTagName("p");
+//   console.log( p1);
+//   var p1 = document.getElementsByTagName("p")[0];
+//   console.log(p1);
+
+
+</script>

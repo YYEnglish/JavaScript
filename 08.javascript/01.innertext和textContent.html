@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+        <div class="one" id="one">
+                <!--我是一个div-->
+                <!--<span>-->
+                  <!--我是一个span-->
+                  <!--<i>我是一个i</i>-->
+                <!--</span>-->
+              </div>
+</body>
+</html>
+<script>
+  //1.根据id获取元素
+  var btn = document.getElementById("one");
+
+  //innerText  他其实不是标准的w3c的属性，他是IE的那一套，FF42之前不支持。
+  //a.innerText可以获取元素中的文本，包括子元素的文本。
+  //console.log(btn.innerText);
+  //b.innerText可以设置元素中的文本，如果设置的内容中包含标签，那么不会把标签给解析出来。
+  //btn.innerText = "哈哈哈，看一下<p>我是一个p</p>";
+
+    //textContent获取元素的文本，才是w3c中标准的属性。
+      //a.textContent可以获取元素中的文本，包括子元素的文本。
+        //console.log(btn.textContent);
+          //b.textContent可以设置元素中的文本，如果设置的内容中包含标签，那么不会把标签给解析出来。
+  //btn.textContent = "哈哈哈，再看看<p>我是一个p</p>";
+
+
+    //兼容性
+  //innerText是ie的东西，FF42之前不支持
+  //textContent是w3c标准的东西，IE8和他之前不支持。
+
+</script>

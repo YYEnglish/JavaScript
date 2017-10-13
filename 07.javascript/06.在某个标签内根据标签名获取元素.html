@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <ul id="one">
+        <li id="sb">我是ul中的第1个li标签</li>
+        <li>我是ul中的第2个li标签</li>
+        <li>我是ul中的第3个li标签</li>
+        <li>我是ul中的第4个li标签</li>
+        <li>我是ul中的第5个li标签</li>
+        <li>我是ul中的第6个li标签</li>
+      </ul>
+      
+      <ol id="two">
+        <li>我是ol中的第1个li标签</li>
+        <li>我是ol中的第2个li标签</li>
+        <li>我是ol中的第3个li标签</li>
+        <li>我是ol中的第4个li标签</li>
+        <li>我是ol中的第5个li标签</li>
+        <li>我是ol中的第6个li标签</li>
+      </ol>
+</body>
+</html>
+<script>
+    function id(id){
+        return document.getElementById(id);
+    }
+    function TagName(TagName){
+        return document.getElementsByTagName(TagName);
+    }
+    var uls = id("one");
+    var lis=uls.getElementsByTagName("li");
+    console.log(lis);
+
+      //3.注意 **********//
+  //var ul1 = id("one");
+  //var li1 = ul1.getElementById("sb"); //没有这种写法
+  //console.log(li1); //报错。
+
+</script>

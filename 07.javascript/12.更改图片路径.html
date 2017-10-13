@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <img src="images/duorou1.png" alt="" id="pic"/>
+    <input type="button" id="btn" value="更换图片"/>
+    <script>
+        function id(id){
+            return document.getElementById("id");
+        }
+        var btn = id("btn");
+        var pic= id('pic');
+        btn.onclick=function(){
+            var num = Math.ceil(Math.random()*3);
+            pic.src= "img/"+num+".jpg";
+        }
+    </script>
+</body>
+</html>

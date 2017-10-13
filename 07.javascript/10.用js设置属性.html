@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+        <input type="button" value="按钮" disabled="disabled"/>
+        <input type="radio" checked="checked"  disabled="disabled"/>
+        <input type="radio" />
+        <input type="radio" id="r1"/>
+        <input type="button" value="按钮333" id="btn333"/>
+        
+        <select name="" id="">
+                <option value="" selected="selected">0</option>
+                <option value="" selected="selected">0</option>
+                <option value="" selected="selected">0</option>
+                <option value="" selected="selected">0</option>
+                <option value="" selected="selected">0</option>
+                <option value="" selected="selected">0</option>
+              </select>
+    
+</body>
+</html>
+<script>
+      //在html中，有属性，如果写上了就是一种状态，没有写上就是另外的一种状态。
+  //如果要用js写这样的属性，怎么写？ 给这个属性设置true或者false。
+    function id(id){
+        return document.getElementById(id);
+    }
+    var r1=id("r1");
+    console.log(r1);
+    r1.checked=true;
+
+
+//     var r1 = document.getElementById("r1");
+//   r1.checked = true;
+    // var btn333=id("btn333");
+    // btn333.disabled=false;
+//     var btn333 = document.getElementById("btn333");
+//   btn333.disabled = false;
+
+</script>

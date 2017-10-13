@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <audio src="../images/城南花已开.mp3" autoplay id="music"></audio>
+    <input type="button" value="开始播放" id="play" />
+    <input type="button" value="暂停播放" id="pause"/>
+    <script>
+        var mu=document.getElementById('music');
+        var play=document.getElementById('play');
+        var pause=document.getElementById('pause');
+        play.onclick=function(){
+            music.play();
+        }
+        pause.onclick=function(){
+            music.pause();
+        }
+    </script>
+</body>
+</html>

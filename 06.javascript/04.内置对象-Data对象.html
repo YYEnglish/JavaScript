@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+        //1.内置对象  Math     Date日期对象
+
+    //2.创建日期对象  //利用当前系统时间创建出来的一个日期对象。
+    var date1 = new Date();
+    console.log(date1);
+
+
+        //输出日期对象里面包含的信息
+    //console.log(date1); //输出date1,就相当于调用了这个date1这个对象里面的toString();
+    //console.log(date1.toString()); //Thu Jun 29 2017 11:23:07 GMT+0800 (中国标准时间)
+    //console.log(date1.toDateString()); //Thu Jun 29 2017
+    //console.log(date1.toLocaleDateString()); //2017/6/29
+    //console.log(date1.toTimeString()); //11:24:02 GMT+0800 (中国标准时间)
+    //console.log(date1.toLocaleTimeString()); //上午11:24:02
+
+        //3.可以指定时间 创建日期对象
+    //a.直接用逗号隔开、
+    //var date2 = new Date(2017,6,29,8,20,30); //月份是从0开始算，这里给6，实际上是7月
+    //console.log(date2);
+
+        //b.小括号的参数是日期字符串
+    //var date3 = new Date("2017-6-29 8:20:30");
+    //console.log(date3);
+
+        //c.小括号的参数是 毫秒数    代表的是从1970-1-1日 早八点0分0秒，过了多少毫秒。
+    //var date4 = new Date(1498665600000); //1秒 = 1000毫秒
+    //console.log(date4);
+
+        //4.把日期转换成毫秒形式 - 从1970-1-1开始计算的。
+    //var date5 = Date.parse("2017-6-29"); //把指定的时间转换成毫秒形式。
+    //console.log(date5);
+    //var date6 = Date.now(); //把当前系统时间转换成毫秒形式
+    //console.log(date6);
+
+
+        //5.获取日期对象里面的某一个部分
+    //getTime()  返回毫秒数和valueOf()结果一样
+    //getMilliseconds()
+    //getSeconds()  返回0-59
+    //getMinutes()  返回0-59
+    //getHours()   返回0-23
+    //getDay()     返回星期几 0周日   6周6
+    //getDate()    返回当前月的第几天,当月的几号
+    //getMonth()   返回月份，从0开始
+    //getFullYear()   返回4位的年份  如 2016//
+
+
+        //6.小练习
+    //写一个函数传过来一个日期对象，返回yyyy-MM-dd HH:mm:ss形式的字符串
+    //2016-12-01 15:02:03
+    function getStringOfDate(date){
+      //拿到日期对象里面的每一个部分(年月日，时分秒)
+      var year = date.getFullYear();//年
+      var month = (+date.getMonth())+1;//月 从0开始算的。
+      var day = date.getDate(); //日
+      var hour = date.getHours();
+      var min = date.getMinutes();
+      var sec = date.getSeconds();
+
+      //为了都是2位，好看，就要做小于10的判断。
+      month =  month < 10 ? "0"+month :month;
+
+      var str = "" +year + "-" + month +"-" +day + " " +hour +":" +min +":" +sec;
+      return str;
+    }
+
+    var date1 = new Date();
+    console.log(getStringOfDate(date1));
+</script>

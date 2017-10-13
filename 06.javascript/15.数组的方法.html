@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+        //Array内置对象  有写好的属性和方法。
+        // 1. concat
+        // var n1 = [1,2,3];
+        // var n2 = [4,5,6];
+        // var n3 = n1.concat(n2);
+        // console.log(n3);
+        // console.log(n1);
+        // console.log(n2);
+        // concat 合并两个数组
+        // 原数组不变
+        
+        // 2.join
+        // var n1 = [1,2,3];
+        // var n2 = [4,5,6];
+        // var n3 = n1.join(n2);
+        // console.log(n3);   错乱的加入14,5,624,5,63
+
+        // 3.push()
+//         var n1 = [1,2,3];
+//         var n2=n1.push(4,5,6);
+//         console.log(n2);
+
+//     //3.push();
+//    var arr = [10,20,30];   //arr[3] = 10;   arr[arr.length] = 10;
+//    var ld = arr.push(40,50,60);
+//    console.log(ld);
+//    console.log(arr);
+
+            //4.pop();
+//    var arr = [10,20,30];
+//    var num = arr.pop();
+//    console.log(num); //30
+//    console.log(arr); // [10,20]
+
+
+    //5.unshift()
+//    var arr = [10,20,30];
+//    var num = arr.unshift(70,80,90);
+//    console.log(num);  // 6 数组的长度
+//    console.log(arr);  //[10,20,30,70,80,90]
+
+
+    //6.shift()
+//    var arr = [10,20,30];
+//    var num = arr.shift();
+//    console.log(num);  //10
+//    console.log(arr);  //[20,30]
+
+
+    //7.reverse()
+//    var arr = [10,20,30,40,50,60,70];
+//    var arr1 =  arr.reverse();
+//    console.log(arr1);
+//    console.log(arr); //会改变原来的数组  有大到小排序
+
+
+    //8.slice()
+//    var arr = [10,20,30,40,50,60,70];
+//    var arr1 = arr.slice(0);
+//    console.log(arr1);
+//    console.log(arr);
+
+
+    //9.toString()
+//    var arr = [10,20,30,40];
+//    var str = arr.toString();
+//    console.log(str);
+//    console.log(typeof str);
+//    console.log(arr);
+
+
+    //10.valueOf()
+//    var arr = [10,20,30,40];
+//    var arr1 = arr.valueOf();
+//    console.log(arr1);
+//    console.log(arr);
+
+
+    //11.sort();
+    function test1(a,b)
+    {
+      return a-b;
+    }
+    function test2(a,b){
+      return b-a;
+    }
+    var arr = [123,12,21,22,20,205];
+    var arr1 =  arr.sort(test1);
+
+    console.log(arr1);
+</script>

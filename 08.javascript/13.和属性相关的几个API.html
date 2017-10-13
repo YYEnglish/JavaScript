@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+  <div class="one" id="box" aaa="aaa111"></div>
+  <script>
+        var box = document.getElementById("box");
+  //console.log(box.className); //获取对象的类名用className
+  //console.log(box.id);
+  //console.log(box.aaa);//我们自定义一个aaa属性写在元素的身上，用点语法是无法获取的。
+  box.bbb = "bbb111";
+  //console.log(box.bbb);//利用点语法设置的属性，是不会展示在元素的身上的。
+  
+    //---------------和属性相关的几个API--------------------------------
+  //2.设置元素的属性
+  //box.setAttribute("ddd","ddd111");
+  //console.log(box.ddd);//undefiend
+  ////利用setAttribute设置的属性，只能通过getAttribute来获取。
+  //console.log(box.getAttribute("ddd"));
+
+
+  //1.获取元素的属性
+  //console.log(box.getAttribute("class")); //可以拿到默认的属性,要拿到类名的用的是class。
+  //console.log(box.getAttribute("id"));
+  //console.log(box.getAttribute("aaa")); //可以拿到写在元素身上的自定义属性。
+  //console.log(box.getAttribute("bbb")); //不能拿到用点语法设置的属性。
+
+
+  //3.移出属性
+  //box.className = ""; //这种移出属性的方式不彻底，会把值给清空，但是属性名还在。
+  box.removeAttribute("class"); //移出属性，连属性名都一起移除掉了。
+
+  
+  </script>
+</body>
+</html>

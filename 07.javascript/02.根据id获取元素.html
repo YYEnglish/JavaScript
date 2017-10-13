@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <input type="button" value="按钮1" class="one" id="btn"/>
+    <div id="box" class="two" style="border: 1px solid #000; width: 100px; height: 100px">
+      我是一个div
+    </div>
+    
+</body>
+</html>
+<script>
+        //4.我们也来试试通过id获取元素
+    //var btn2 = document.getElementById("btn");
+    //因为代码是从上往下执行的，执行到这里的时候，页面的元素还没有被渲染出来，既然页面没有这个元素，那要获取这个元素肯定就是得到一个null。
+    //console.log(btn2); //null
+
+        // var s1=document.getElementById("");
+
+
+    //5.我现在就是要在页面元素的上方获取这个元素，怎么办？
+    //window.onload这个方法的特殊之处在于：这个方法中的代码要等到页面完全被渲染出来之后才会执行。
+
+    window.onload=function(){
+        var btn2=document.getElementById("btn");
+        console.log(btn);
+    }
+
+    
+    //6.总结： 通过id获取元素，返回的null的情况。
+    //a.使用了不存在的id。(有可能id写错了)
+    //b.在js通过id获取元素的时候，当前这个id的元素，还没有加载出来。
+
+
+      //1.根据id来获取页面上指定的元素。
+  //var btn1 = document.getElementById("btn");
+  ////输出利用id获取到的那个对象
+  //console.log(btn1);
+  ////输出对象里面的属性。
+  //console.log(btn1.type);
+  //console.log(btn1.value);
+  //console.log(btn1.id);
+  //console.log(btn1.className); //由于class是一个关键字，所以要通过js获取class属性，只能用className
+
+
+
+
+  //2.根据id来获取页面上指定的元素。
+  //var box1 = document.getElementById("box");
+  //console.log(box1);
+  ////获取页面元素的id
+  //console.log(box1.id);
+  ////获取页面元素的类
+  //console.log(box1.className);
+  ////获取的是页面元素的样式
+  //console.log(box1.style.width);
+  //console.log(box1.style.height);
+  //console.log(box1.style.border);
+  ////获取页面元素的内容
+  //console.log(box1.innerHTML);
+
+
+
+  //3.注意 -有些浏览器人为id是唯一的，他就不通过id获取元素，直接通过id来操作这个元素。
+  //不推荐使用
+  //console.log(box.id);
+  //console.log(box.className);
+
+
+  //4.注意：
+  var sb = document.getElementById("sb");
+  //就是因为页面上没有id为sb的这个元素，所以通过sb来获取元素返回的是null。
+  console.log(sb); //null
+</script>

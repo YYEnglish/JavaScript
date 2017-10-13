@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+            .one {
+              width: 100px;
+              height: 100px;
+              background-color: pink;
+            }
+          </style>
+</head>
+<body>
+        <input type="button" value="按钮1" id="btn1"/>
+        <input type="button" value="按钮2" id="btn2"/>
+        
+        <br/><br/>
+        <div id="box" class="one">我是一个div</div>
+        <br/><br/>
+        <input type="button" value="终极按钮" id="btn"/>
+</body>
+</html>
+<script>
+    function id(id){
+        return document.getElementById(id);
+    }
+    var btn1=id("btn1");
+    var btn2=id("btn2");
+    var box=id("box");
+    var btn=id("btn");
+    btn1.onclick=function(){
+        box.style.backgroundColor="red";
+    }
+    btn2.onclick=function(){
+        box.style.backgroundColor="skyblue";
+    }
+    var flag=true;
+    btn.onclick=function(){
+        if(flag){
+            box.style.backgroundColor="red";
+            flag=false;
+        }else{
+            box.style.backgroundColor="skyblue";
+            flag=true;
+        }
+    }
+</script>

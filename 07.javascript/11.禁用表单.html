@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<input type="text"/>
+<input type="password"/>
+<input type="button" value="登录"/>
+<br/><br/>
+
+<button id="jy">禁用</button>
+<button id="qy">启用</button>
+<br/><br/>
+<button id="btn">禁用</button>
+<script>
+    function id(id){
+        return document.getElementById(id);
+    }
+    var inps=document.getElementsByTagName("input");
+    var jy = id("jy");
+    var qy = id('qy');
+    var btn = id ("btn");
+    jy.onclick=function(){
+        for ( var i=0;i<inps.length;i++){
+            inps[i].disabled=true;
+        }
+    }
+    qy.onclick=function(){
+        for ( var i=0;i<inps.length;i++){
+            inps[i].disabled=false;
+        }
+    }
+
+    var flag=true;
+    btn.onclick=function(){
+        if(flag){
+            for ( var i=0;i<inps.length;i++){
+                inps[i].disabled=true;
+                btn.innerHTNL="启用";
+                flag=false;
+            }
+        }else{
+            for ( var i=0;i<inps.length;i++){
+                inps[i].disabled=false;
+                btn.innerHTNL="禁用";
+                flag=true;
+            }
+        }
+    }
+</script>
+
+</body>
+</html>

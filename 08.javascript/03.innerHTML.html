@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+        <div class="one" id="one">
+                <!--我是一个div-->
+                <!--<p>我是一个p</p>-->
+              </div>
+</body>
+</html>
+<script>
+    var box =document.getElementById("one");
+    //1.innerHTML可以获取标签中的内容（文本或者子标签）。
+    //console.log(box.innerHTML);
+
+
+      //2.innerHTML可以设置标签中的内容，如果原来有内容会覆盖原来的内容。
+  //  如果内容中有标签，是可以把标签给解析出来的。
+
+  box.innerHTML = "我是使用innerHTML设置的内容<b>哈哈哈</b>";
+
+  
+  //3.innerHTML没有兼容性问题，所有的浏览器都支持。
+</script>

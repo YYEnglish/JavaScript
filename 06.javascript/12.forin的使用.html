@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+        //1.数组中存放元素有顺序。
+        var arr = [10,20,30,40,50];
+    //数组中要取到每一个元素，可以使用for循环。
+    //因为数组中的元素有顺序，for循环的循环增量的值刚好就可以作为数组的下标，所以才可以使用for循环来拿到每一个元素的值。
+
+
+    //2.对象中存放属性和方法   是没有顺序的。
+    //不能使用for循环来遍历对象中的每一个属性。
+    //就是要取对象中的 每一个属性值， 怎么办？  要用到forin
+
+    var obj = {
+      name:"张三",
+      age:18,
+      sayHi: function () {
+        console.log("我的名字是"+this.name);
+      }
+    };
+
+    for (var key in obj){
+        if(obj[key] instanceof Function){
+            obj[key]();
+        }else{
+            console.log(obj[key]);
+        }
+    }
+</script>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+        <input type="text" value="请输入内容" id="search"/>
+        
+        <!--<input type="text" placeholder="请输入内容"/>-->
+
+<script>
+    var inp=document.getElementById('search');
+    inp.onfocus=function(){
+            //如果输入框的内容是默认值，才应该他他的内容的设置为空。
+        if(inp.value=="请输入内容"){
+            inp.value="";
+        }
+    }
+    inp.onblur=function(){
+        if ( inp.value==""){
+            inp.value="请输入内容";
+        }
+    }
+</script>
+</body>
+</html>

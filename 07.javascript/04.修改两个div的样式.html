@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div class="one" id="one" ></div>
+    <br/>
+    <div class="two" id="two"></div>
+</body>
+</html>
+<script>
+    // var one = document.getElementById("one");
+    // var two = document.getElementById("two");
+    function id(id){
+        return document.getElementById(id);
+    }
+    var one = id("one");
+    var two = id ("two");
+    
+      //2.开始设置样式
+  //one.style.width = "100px";
+  //one.style.height = "100px";
+  //one.style.backgroundColor = "pink";
+  //one.innerHTML = "我是第一个div";
+
+  //two.style.width = "200px";
+  //two.style.height = "200px";
+  //two.style.backgroundColor = "red";
+  //two.innerHTML = "我是第二个div";
+
+  //由于上面设置元素的样式的代码是一样的，所以要有封装的思想。
+  function setElementStyle(ele,width,height,bgc,text){
+      ele.style.width=width;
+      ele.style.height=height;
+      ele.style.backgroundColor=bgc;
+      ele.innerHTML=text;
+  }
+  setElementStyle(one,"100px","100px","pink","我是第一个div");
+  setElementStyle(two,"200px","200px","red","我是第二个div");
+
+</script>

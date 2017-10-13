@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+        //1.this
+    //方法中如果有this， 谁调用这个方法，那么这个方法中的this就是谁。
+    var s1 = Object();
+    s1.name = "小明";
+    s1.age = 18;
+    s1.sayHi = function () {
+      //console.log("我的名字是张三，我的年龄是18，我的性别是男");
+      //方法一
+      //console.log("我的名字是"+s1.name+"，我的年龄是18，我的性别是男");
+      //方法二
+      console.log("我的名字是"+this.name+"，我的年龄是18，我的性别是男");
+    }
+
+    // 调用对象的方法
+    s1.sayHi();
+    s1.name="小红";
+    
+</script>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+        //1.回调函数 - 一个函数如果作为另外一个函数的参数，就叫做回调函数。
+
+        //    function test(n1){
+//
+//    }
+//    test(10); //10是Number数据类型中的一个值，可以作为函数的参数。
+
+
+
+//    function sb1(){
+//      console.log("呵呵");
+//    }
+//    function sb2(func){ //sb2是一个函数，要求他的参数func也是一个函数，那么func就是一个回调函数。
+//      console.log("哈哈哈开始");
+//      func(); //sb1();
+//      console.log("哈哈结束");
+//    }
+//    sb2(sb1); //sb1是Function数据类型中的一个值，可以作为函数的参数。
+
+
+
+    //2.什么时候使用回调函数。
+//    function showGoodNight(){
+//      console.log("在楼下遛弯");
+//      console.log("遇到了一个漂亮的妹子");
+//      console.log("和妹子聊的很happy");
+//      console.log("和妹子约好有空约跑.....");
+//    }
+//    function showBadNight(){
+//      console.log("女朋友今天下班比较早");
+//      console.log("和女朋友一起去逛街");
+//      console.log("什么都没买，没意思.....");
+//    }
+//    //展示一整天要做什么，
+//    function showDay(food,yan,func){
+//      console.log("起床");
+//      console.log("洗漱");
+//      console.log("上课");
+//      console.log("吃"+food);
+//      console.log("抽根"+yan+"放松放松");
+//      console.log("上课");
+//      console.log("放学");
+//
+//      //晚上要做事情
+//      if(Object.prototype.toString.call(func) == "[object Function]"){
+//        func();
+//      }
+//    }
+
+
+//    //调用相同的函数，但是执行的代码不一样。
+//    showDay("鸡腿","利群",showGoodNight); //把整个函数showGoodNight，做为参数传递函数里面去。
+//    showDay("牛排","群姐",showBadNight);
+
+function getSum(num1,num2){
+      return num1 + num2;
+    }
+    function getSub(num1,num2){
+      return num1 - num2;
+    }
+    //由于参数包含了一个函数，那么这个函数就很灵活。
+    function chuLiTwoNum(n1,n2,func){
+      var res1 = n1 * n1; //100
+      var res2 = n2 + 10; //30
+      if(func instanceof Function){
+        return  func(res1,res2);
+      }
+    }
+
+    console.log(chuLiTwoNum(10, 20, getSum)); //130
+    console.log(chuLiTwoNum(10, 20, getSub)); //70
+
+
+</script>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <!--<input type="button" value="关灯" id="gd"/>-->
+<!--<input type="button" value="开灯" id="kd"/>-->
+
+<input type="button" value="关灯" id="offOrOnBtn"/>
+<script>
+    var ff=document.getElementById('offOrOnBtn');
+    var flag=true;
+    ff.onclick=function(){
+        if(flag){
+            document.body.style.backgroundColor="#000";
+            this.value="开灯";
+            flag=false;
+        }else{
+            document.body.style.backgroundColor="#fff";
+            this.value="关灯";
+            flag=true;
+        }
+    }
+</script>
+</body>
+</html>

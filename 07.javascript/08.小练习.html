@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .one {
+          width: 100px;
+          height: 100px;
+          background-color: red;
+        }
+      </style>
+</head>
+<body>
+    <button id="btn1">按钮1</button>
+    <button id="btn2">按钮2</button>
+    <button id="btn3">按钮3</button>
+    <button id="btn4">按钮4</button>
+    <br/> <br/>
+    <div id="box" class="one">我是一个div</div>
+</body>
+</html>
+<script>
+    function id(id){
+        return document.getElementById(id);
+    }
+      //页面上有4个按钮，一个div
+  //分别给按钮设置单击事件， 给div分别设置宽高背景色文字
+
+  //1.获取元素
+    var btn1=id("btn1");
+    var btn2=id("btn2");
+    var btn3=id("btn3");
+    var btn4=id("btn4");
+    var box=id("box");
+
+      //强调： 注册事件本质，就是给这个对象写了一个方法。
+  //这个方法什么时候被执行，取决于你什么时候调用（被触发），满足那个特定的交互瞬间。
+
+  //2.分别给按钮注册事件
+  btn1.onclick=function (){
+      box.style.width="200px";
+  }
+  btn2.onclick=function (){
+      box.style.height="200px";
+  }
+  btn3.onclick=function (){
+      box.style.backgroundColor="pink";
+  }
+  btn4.onclick=function (){
+      box.innerHTML="我不是个div";
+  }
+</script>

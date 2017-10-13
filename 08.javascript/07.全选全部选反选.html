@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<input type="checkbox"/>
+<input type="checkbox"/>
+<input type="checkbox"/>
+<input type="checkbox"/>
+<input type="checkbox"/>
+<br/><br/>
+<button id="checkAll">全选</button>
+<button id="unCheckAll">全不选</button>
+<button id="turnCheck">反选</button>
+<script>
+    var ipt=document.getElementsByTagName('input');
+    var checkAll=document.getElementById('checkAll');
+    var unCheckAll=document.getElementById('unCheckAll');
+    var turnCheck=document.getElementById('turnCheck');
+    checkAll.onclick=function(){
+        for (var i=0; i<ipt.length;i++){
+            ipt[i].checked=true;
+        }
+    }
+    unCheckAll.onclick=function(){
+        for(var i=0;i<ipt.length;i++){
+            ipt[i].checked=false;
+        }
+    }
+    turnCheck.onclick=function(){
+        for ( var i=0; i<ipt.length;i++){
+            //  if(ipt[i].checked==true){
+            //     ipt[i].checked=false;
+            //  }else{
+            //      ipt[i].checked=true;
+            //  }
+            ipt[i].checked = !ipt[i].checked;
+        }
+    }
+
+</script>
+</body>
+</html>
