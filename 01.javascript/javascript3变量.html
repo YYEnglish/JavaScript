@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //    alert("123");
+//    alert(123);
+//    alert("哈哈");
+//    alert(哈哈); //为什么这里出了问题，哈哈 他不是直接量。
+
+
+    /*
+    * 1.直接量
+    *   可以直接拿来使用的东西，就是直接量。
+    *
+    *   那些东西可以看成是直接量呢？
+    *     字符串类型的数据都是直接量。
+    *     Number类型的数据都是直接量。
+    *     布尔类型的数据都是直接量。
+    *     ......
+
+     2.数据类型
+    *   写js代码，实际上就是处理很多的一些数据。数据有各种各样的，就要把数据分类。
+    *   因为不同的数据处理存储方式不一样，所以要分类。
+    *
+    *
+    *   a.String类型 字符串类型
+    *     在js中只要是被双引号或者单引号引起来的数据都是字符串。 "123"  "0"  "ha哈"  '@#!'  ""空字符串 " "
+    *
+    *   b.Number类型 数字类型
+    *     能够做算术运算的，表示计数的这些。   1   2    -1   0   1.5   -0,999999
+    *     极值：
+
+    Infinity 无穷大
+    -Infinity 无穷小
+    Number.MAX_VALUE 最大值
+    Number.MIN_VALUE 最小值
+    -Number.MAX_VALUE 最小值
+
+     *   c.Boolean类型 布尔类型
+    *     这个类型里面只有2个取值 ： false  true
+
+
+    3.检测某一个数据的数据类型。
+    *   typeof  需要被检测类型的数据
+    *   typeof (需要被检测类型的数据);  //小括号其实是为了提高优先级的。
+    */
+    console.log(typeof 123);
+    console.log(typeof '123');
+    console.log(typeof 'true');
+    console.log(typeof true);
+    console.log(typeof Infinity);
+    console.log(typeof -123);
+
+    conaole.log(typeof (12+23));
+    console.log(true);
+    console.log(Infinity);
+    console.log(Number.MAX_value);
+    console.log(-Number.MAX_value);
+    console.log(Number.MIN_value);
+    
+
+
+    </script>
+</body>
+</html>
