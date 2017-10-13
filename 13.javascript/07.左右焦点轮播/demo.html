@@ -1,0 +1,203 @@
+<!--<!DOCTYPE html>-->
+<!--<html lang="en">-->
+<!--<head>-->
+    <!--<meta charset="UTF-8">-->
+ <!--<title></title>-->
+    <!--<style>-->
+        <!--body, ul, ol, li, img {-->
+            <!--margin: 0;-->
+            <!--padding: 0;-->
+            <!--list-style: none;-->
+        <!--}-->
+
+        <!--#box {-->
+            <!--width: 490px;-->
+            <!--height: 270px;-->
+            <!--padding: 5px;-->
+            <!--position: relative;-->
+            <!--border: 1px solid #ccc;-->
+            <!--margin: 100px auto 0;-->
+        <!--}-->
+
+        <!--.ad {-->
+            <!--width: 490px;-->
+            <!--height: 270px;-->
+            <!--/*overflow: hidden;*/-->
+            <!--position: relative;-->
+        <!--}-->
+
+        <!--#box img {-->
+            <!--width: 490px;-->
+        <!--}-->
+
+        <!--.ad ol {-->
+            <!--position: absolute;-->
+            <!--right: 10px;-->
+            <!--bottom: 10px;-->
+        <!--}-->
+
+        <!--.ad ol li {-->
+            <!--width: 20px;-->
+            <!--height: 20px;-->
+            <!--line-height: 20px;-->
+            <!--border: 1px solid #ccc;-->
+            <!--text-align: center;-->
+            <!--background: #fff;-->
+            <!--float: left;-->
+            <!--margin-right: 10px;-->
+            <!--cursor: pointer;-->
+            <!--_display: inline;-->
+        <!--}-->
+
+        <!--.ad ol li.current {-->
+            <!--background: yellow;-->
+        <!--}-->
+
+        <!--.ad ul li {-->
+            <!--float: left;-->
+        <!--}-->
+
+        <!--.ad ul {-->
+            <!--position: absolute;-->
+            <!--top: 0;-->
+            <!--width: 2940px;-->
+        <!--}-->
+
+        <!--.ad ul li.current {-->
+            <!--display: block;-->
+        <!--}-->
+
+        <!--#arr {-->
+            <!--display: none;-->
+        <!--}-->
+
+        <!--#arr span {-->
+            <!--width: 40px;-->
+            <!--height: 40px;-->
+            <!--position: absolute;-->
+            <!--left: 5px;-->
+            <!--top: 50%;-->
+            <!--margin-top: -20px;-->
+            <!--background:#000;-->
+            <!--cursor: pointer;-->
+            <!--line-height: 40px;-->
+            <!--text-align: center;-->
+            <!--font-weight: bold;-->
+            <!--font-family: '黑体';-->
+            <!--font-size: 30px;-->
+            <!--color: #fff;-->
+            <!--opacity: 0.3;-->
+            <!--border: 1px solid #fff;-->
+        <!--}-->
+
+        <!--#arr #right {-->
+            <!--right: 5px;-->
+            <!--left: auto;-->
+        <!--}-->
+    <!--</style>-->
+<!--</head>-->
+<!--<body>-->
+<!--<div id="box" class="all">-->
+    <!--<div class="ad">-->
+        <!--<ul id="imgs">-->
+            <!--<li><img src="../images/06.jpg"/></li>-->
+            <!--<li><img src="../images/07.jpg"/></li>-->
+            <!--<li><img src="../images/08.jpg"/></li>-->
+            <!--<li><img src="../images/09.jpg"/></li>-->
+            <!--<li><img src="../images/10.jpg"/></li>-->
+        <!--</ul>-->
+    <!--</div>-->
+    <!--<div id="arr">-->
+        <!--<span id="left">&lt;</span>-->
+        <!--<span id="right">&gt;</span>-->
+    <!--</div>-->
+<!--</div>-->
+
+<!--<script>-->
+    <!--//简单轮播图：依靠点击的按钮的索引值，控制list运动到哪个位置-->
+    <!--//左右焦点图，无法使用某个标签的索引，所以我们自己设置变量计数-->
+    <!--var box =document.getElementById("box");-->
+    <!--var ad=box.children[0];-->
+    <!--var list=ad.children[0];-->
+    <!--var imgWidth=ad.offsetWidth;-->
+    <!--var arrBox=box.children[1];-->
+    <!--var arrLeft=arrBox.children[0];-->
+    <!--var arrRight=arrBox.children[1];-->
+    <!--box.onmouseover= function () {-->
+        <!--arrBox.style.display='block';-->
+    <!--};-->
+    <!--box.onmouseout= function () {-->
+        <!--arrBox.style.display="none";-->
+    <!--};-->
+    <!--var picCount=0;-->
+    <!--arrRight.onclick= function () {-->
+        <!--console.log("sdfg");-->
+        <!--if(picCount<list.children.length-1){-->
+            <!--picCount++;-->
+            <!--var target=-picCount*imgWidth;-->
+            <!--animate(list,target);-->
+        <!--}-->
+    <!--};-->
+    <!--arrLeft.onclick= function () {-->
+        <!--if(picCount>0){-->
+            <!--picCount&#45;&#45;;-->
+            <!--var target=-picCount*imgWidth;-->
+            <!--animate(list,target);-->
+        <!--}-->
+    <!--};-->
+    <!--function animate(tag,target){-->
+        <!--clearInterval(tag.timer);-->
+        <!--tag.timer=setInterval(function () {-->
+            <!--var leader=tag.offsetLeft;-->
+            <!--var step=9;-->
+            <!--step=leader>target?-step:step;-->
+            <!--if(Math.abs(leader-target)>Math.abs(step)){-->
+                <!--leader=leader+step;-->
+                <!--tag.style.left=leader+"px";-->
+            <!--}else{-->
+                <!--tag.style.left=target+"px";-->
+                <!--clearInterval(tar.timer);-->
+            <!--}-->
+        <!--},20);-->
+    <!--}-->
+<!--</script>-->
+<!--</body>-->
+<!--</html>-->
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+
+</body>
+</html>
+
+<script>
+//    var arr1=[12,32,45,65,145,79,215,214,13,5];
+//    for (var i=0;i<arr1.length;i++){
+//        for (var j=0;j<arr1.length;j++){
+//            if(arr1[j]>arr1[j+1]){
+//                var num=0;
+//                num=arr1[j];
+//                arr1[j]=arr1[j+1];
+//                arr1[j+1]=num;
+//            }
+//        }
+//    }
+//    console.log(arr1);
+
+    var arr=[1,2,3,4,5,6,7,8,9];
+    var arr1=[];
+    function t(a,b){
+        return a-b;
+    }
+function t1(a,b){
+    return b-a;
+}
+
+</script>
+
+
+139.199.192.48

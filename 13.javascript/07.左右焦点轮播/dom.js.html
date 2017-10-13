@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        body, ul, ol, li, img {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        #box {
+            width: 490px;
+            height: 270px;
+            padding: 5px;
+            position: relative;
+            border: 1px solid #ccc;
+            margin: 100px auto 0;
+        }
+
+        .ad {
+            width: 490px;
+            height: 270px;
+            /*overflow: hidden;*/
+            position: relative;
+        }
+
+        #box img {
+            width: 490px;
+        }
+
+        .ad ol {
+            position: absolute;
+            right: 10px;
+            bottom: 10px;
+        }
+
+        .ad ol li {
+            width: 20px;
+            height: 20px;
+            line-height: 20px;
+            border: 1px solid #ccc;
+            text-align: center;
+            background: #fff;
+            float: left;
+            margin-right: 10px;
+            cursor: pointer;
+            _display: inline;
+        }
+
+        .ad ol li.current {
+            background: yellow;
+        }
+
+        .ad ul li {
+            float: left;
+        }
+
+        .ad ul {
+            position: absolute;
+            top: 0;
+            width: 2940px;
+        }
+
+        .ad ul li.current {
+            display: block;
+        }
+
+        #arr {
+            display: none;
+        }
+
+        #arr span {
+            width: 40px;
+            height: 40px;
+            position: absolute;
+            left: 5px;
+            top: 50%;
+            margin-top: -20px;
+            background: #000;
+            cursor: pointer;
+            line-height: 40px;
+            text-align: center;
+            font-weight: bold;
+            font-family: '黑体';
+            font-size: 30px;
+            color: #fff;
+            opacity: 0.3;
+            border: 1px solid #fff;
+        }
+
+        #arr #right {
+            right: 5px;
+            left: auto;
+        }
+    </style>
+</head>
+<body>
+<div id="box" class="all">
+    <div class="ad">
+        <ul id="imgs">
+            <li><img src="../images/06.jpg"/></li>
+            <li><img src="../images/07.jpg"/></li>
+            <li><img src="../images/08.jpg"/></li>
+            <li><img src="../images/09.jpg"/></li>
+            <li><img src="../images/10.jpg"/></li>
+        </ul>
+    </div>
+    <div id="arr">
+        <span id="left">&lt;</span>
+        <span id="right">&gt;</span>
+    </div>
+</div>
+
+<script src="../animate.js"></script>
+<script>
+    //1.获取元素
+    var box = document.getElementById("box");
+    var ad = box.children[0];
+    var ul1 = ad.children[0];
+
+    var imgWidth = ad.offsetWidth;
+
+    var arr = document.getElementById("arr");
+    var arrLeft = document.getElementById("left");
+    var arrRight = document.getElementById("right");
+
+    //2.给box设置鼠标移入、移出事件 -- 显示、隐藏左右焦点按钮。
+    box.onmouseover = function () {
+        arr.style.display = "block";
+    }
+    box.onmouseout = function () {
+        arr.style.display = "none";
+    }
+
+    //声明一个变量，保存图片移动的个数
+    var index = 0;
+
+    //3.给右边的焦点设置一个单击事件
+    arrRight.onclick = function () {
+        //如果显示的是最后一张图片，说明已经到底。 不能再往后移动了。
+        //显示最后一张图片的时候，表示已经出去了4张，index的值是4.
+        if(index < ul1.children.length-1){
+            index++;
+            console.log(index);
+            var target = - index * imgWidth;
+            animate(ul1,target);
+        }
+    }
+
+    //4.给左边的焦点设置一个单击事件
+    arrLeft.onclick = function () {
+        if(index > 0){
+            index--;
+            var target = - index * imgWidth;
+            animate(ul1,target);
+        }
+
+    }
+
+</script>
+</body>
+</html>

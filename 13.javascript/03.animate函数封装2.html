@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>标题</title>
+    <style>
+        .one {
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+            position: absolute;
+            left: 0px;
+            top: 50px;
+        }
+        .two {
+            width: 100px;
+            height: 100px;
+            background-color: skyblue;
+            position: absolute;
+            left: 0px;
+            top: 170px;
+        }
+    </style>
+</head>
+<body>
+<input type="button" value="移动到400" id="btnTo400"/>
+<input type="button" value="移动到600" id="btnTo600"/>
+<div class="one" id="one"></div>
+<div class="two" id="two"></div>
+
+<script>
+    //1.获取元素
+    var btnTo400 = document.getElementById("btnTo400");
+    var btnTo600 = document.getElementById("btnTo600");
+    var one = document.getElementById("one");
+    var two = document.getElementById("two");
+
+
+    //2.给btnTo400按钮注册单击事件
+    btnTo400.onclick = function () {
+        //animate(400);
+        animate(one,400);
+        animate(two,400);
+    }
+
+    //3.给btnTo600按钮注册单击事件
+    btnTo600.onclick = function () {
+        //animate(600);
+        animate(one,600);
+        animate(two,600);
+    }
+
+
+
+    //封装animate函数
+    //把timerId作为对象的属性，那个div要移动，那个div的计时器id就保存在自己的属性里。
+    function animate(obj,target){
+        clearInterval(obj.timeid);
+        obj.timeid=setInterval(function () {
+            var temp=obj.offsetLeft;
+            var step=1;
+            temp+=step;
+            if(temp>=target){
+                clearInterval(obj.timeid);
+                obj.style.left=target+'px';
+            }else{
+                obj.style.left=temp+'px';
+            }
+        },5);
+    }
+</script>
+</body>
+</html>

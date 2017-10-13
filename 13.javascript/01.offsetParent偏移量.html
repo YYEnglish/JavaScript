@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>标题</title>
+    <style>
+        body{
+            width: 300px;
+            height: 300px;
+            border: 10px solid #000;
+        }
+        * {
+            margin: 0px;
+            padding: 0px ;
+        }
+        .one {
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+            margin: 10px;
+            position: absolute;
+            top: 0px;
+            left: 50px;
+        }
+    </style>
+</head>
+<body>
+<div class="one" id="one"></div>
+
+<script>
+    //1 此时one的offsetParent是body。
+    //如果你的定位父级是body，那么他的偏移参照是按照html的(是加了body的边框的)。
+
+
+    var box = document.getElementById("one");
+    console.log(box.offsetParent);
+    console.log(box.offsetLeft);
+</script>
+</body>
+</html>

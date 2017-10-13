@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>标题</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px ;
+        }
+        .box {
+            width: 200px;
+            height: 300px;
+            border: 1px solid #000;
+            margin: 0 auto;
+            margin-top: 100px;
+            position: relative;
+            top: 0px;
+            left: 0px;
+
+        }
+        ul {
+            width: 800px;
+            height: 100px;
+            position: absolute;
+            left: 0px;
+            top: 0px;
+        }
+        ul li {
+            width: 200px;
+            float: left;
+            height: 100px;
+            list-style: none;
+        }
+    </style>
+</head>
+<body>
+<input type="button" value="移动" id="btn"  style="display: block; margin: 0 auto"/>
+<div class="box" id="box">
+    <ul>
+        <li style="background-color: deepskyblue;"></li>
+        <li style="background-color: deeppink;"></li>
+        <li style="background-color: orange;"></li>
+        <li style="background-color: greenyellow;"></li>
+    </ul>
+</div>
+
+<script src="animate.js"></script>
+<script>
+
+    //1.获取元素
+    var ul1 = document.getElementById("box").children[0];
+    var btn = document.getElementById("btn");
+
+    //获取li标签的实际宽度
+    var liWidth = ul1.children[0].offsetWidth;
+
+    //移动的li标签的个数
+    var index = 0;
+
+    //2.给按钮注册单击事件
+    btn.onclick  = function () {
+        index++;
+
+        //移动的目标位置：等于移动的li标签的个数 * 乘以 li标签实际宽度。
+        var target = -index * liWidth;
+        //调用刚封装的那个animate函数。
+        animate(ul1,target);
+    }
+//    var timeid=null;
+    function animate(obj,target){
+        clearInterval(obj.timerId);
+        obj.timerId=setInterval(function () {
+            var currentLeft=obj.offsetLeft;
+            var step=currentLeft<target?1:-1;
+            currentLeft+=step;
+            if(Math.abs(target-currentLeft)<Math.abs(step)) {
+                clearInterval(obj.timerId);
+                obj.style.left = target + 'px';
+            }else{
+                obj.style.left=currentLeft+'px';
+            }
+        },1);
+    }
+//    function animate(obj,target){
+//        clearInterval(obj.timerId);
+//        obj.timerId = setInterval(function () {
+//            var currentLeft = obj.offsetLeft;
+//            var step = currentLeft < target?10:-10;
+//            currentLeft += step;
+//            //如果目标位置和当前位置之间的距离，小于一个步长，就直接赋目标值。
+//            //如果目标位置和当前位置之间的距离，大于等于一个步长，就走一步。
+//            if(Math.abs(target-currentLeft) < Math.abs(step)){
+//                clearInterval(obj.timerId);
+//                obj.style.left = target+"px";
+//            }else {
+//                obj.style.left = currentLeft+"px";
+//            }
+//            //console.log("1");
+//        },30);
+//    }
+</script>
+
+</body>
+</html>

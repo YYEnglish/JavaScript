@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>标题</title>
+    <style>
+        .one {
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+            position: absolute;
+            left: 0px;
+            top: 50px;
+        }
+    </style>
+</head>
+<body>
+<input type="button" value="移动到400" id="btnTo400"/>
+<input type="button" value="移动到600" id="btnTo600"/>
+<div class="one" id="one"></div>
+
+<script>
+    //1.获取元素
+    var btnTo400 = document.getElementById("btnTo400");
+    var btnTo600 = document.getElementById("btnTo600");
+    var one = document.getElementById("one");
+
+    var timeid=null;
+//    btnTo400.onclick= function () {
+//        var temp=0;
+//        clearInterval(timeid);
+//        timeid=setInterval(function () {
+//            temp+=1;
+//            if(temp>=400){
+//                one.style.left="400px";
+//            }else{
+//                one.style.left=temp+'px';
+//            }
+//        },1)
+//    }
+//    btnTo600.onclick= function () {
+//        var temp=400;
+//        clearInterval(timeid);
+//        timeid=setInterval(function () {
+//            temp+=1;
+//            if(temp>=600){
+//                one.style.left="600px";
+//            }else{
+//                one.style.left=temp+"px";
+//            }
+//        },1)
+//    }
+
+    btnTo400.onclick= function () {
+        animate(400);
+    }
+    btnTo600.onclick= function () {
+        animate(600);
+    }
+   function animate(target){
+       clearInterval(timeid);
+       timeid=setInterval(function () {
+           var temp=one.offsetLeft;
+           var currentLeft=1;
+           temp+=currentLeft;
+           if(temp>=target){
+               clearInterval(timeid);
+               one.style.left=target+'px';
+           }else{
+               one.style.left=temp+"px";
+           }
+       },5);
+   }
+</script>
+</body>
+</html>
