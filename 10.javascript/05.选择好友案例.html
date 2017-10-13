@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        select {
+            width: 100px;
+            height: 150px;
+        }
+    </style>
+</head>
+<body>
+<select name="" id="left" multiple>
+    <option value="">林志玲</option>
+    <option value="">范冰冰</option>
+    <option value="">陈奕迅</option>
+    <option value="">周杰伦</option>
+    <option value="">胡歌</option>
+    <option value="">爱谁谁</option>
+</select>
+<input type="button" value=">>" id="btn1"/>
+<input type="button" value="<<" id="btn2"/>
+<input type="button" value=">" id="btn3"/>
+<input type="button" value="<" id="btn4"/>
+<select name="" id="right" multiple>
+</select>
+</body>
+<script>
+    function id(id){
+        return document.getElementById(id);
+    }
+    var selectLeft=id('left');
+    var selectRight=id('right');
+    var allToLeft=id('btn2');
+    var allToRight=id('btn1');
+    var selectToRight=id('btn3');
+    var selectToLeft=id('btn4');
+    allToRight.onclick=function(){
+        for (var i=0;i<selectLeft.children.length;i++){
+            selectRight.appendChild(selectLeft.children[i]);
+            i--;
+        }
+    }
+    allToLeft.onclick=function(){
+        for (var k=0;k<selectRight.children.length;k++){
+            selectLeft.appendChild(selectRight.children[k]);
+            k--;
+        }
+    }
+    selectToRight.onclick=function(){
+        selectRight.appendChild(selectLeft.lastChild);
+    }
+    selectToLeft.onclick=function(){
+        selectLeft.appendChild(selectRight.firstChild);
+    }
+</script>
+</html>

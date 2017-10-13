@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <meta charset="UTF-8">
+  <title>标题</title>
+
+</head>
+<body>
+<input type="button" id="btn" value="追加"/>
+<ul id="ul1">
+  <li>我是第1个li标签</li>
+  <li>我是第2个li标签</li>
+  <li id="li3">我是第3个li标签</li>
+  <li>我是第4个li标签</li>
+  <li>我是第5个li标签</li>
+</ul>
+
+<ul id="ul2">
+  <li>我是第1个li标签2</li>
+  <li>我是第2个li标签2</li>
+  <li id="li32">我是第3个li标签2</li>
+  <li>我是第4个li标签2</li>
+  <li>我是第5个li标签2</li>
+</ul>
+
+<script>
+ var ul1=document.getElementById('ul1');
+ var btn=document.getElementById('btn');
+ var li3=document.getElementById('li3');
+ var li32=document.getElementById('li32');
+ function setText(ele,text){
+    if(typeof ele.textContent=="string"){
+        ele.textContent=text;
+    }else{
+        ele.innerText=text;
+    }
+ }
+ btn.onclick=function(){
+//      var newli=document.createElement('li');
+//      setText(newli,'我是新创建的li标签');
+//      ul1.appendChild(newli);
+
+        // ul1.appendChild(li3);
+
+        ul2.appendChild(li3);
+ }
+
+</script>
+</body>
+</html>

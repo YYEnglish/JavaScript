@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+<input type="button" value="open()" id="open1"/>
+<input type="button" value="close()" id="close1"/>
+<input type="button" value="自杀" id="killSelf"/>
+<script>
+    //1.js的组成（ECMAScript DOM  BOM）
+
+    //2.BOM  browser object model  浏览器对象模型
+
+    //3.window对象- 是顶级对象
+    //a.在js中的全局作用域中声明的变量(全局变量)或者函数(全局函数)，都是window对象的属性或者方法。
+    //  var num = 10;
+    //  console.log(num);
+    //  console.log(window.num);
+    //
+    //
+    //  function test(){
+    //    console.log("哈哈");
+    //  }
+    //  test();
+    //  window.test();
+
+
+    //alert("哈哈");
+    //window.alert("哈哈");
+
+
+    //b.window对象里有一个name属性，他的值永远为string类型的。
+    //  var name = "哈哈啊";
+    //  console.log(window.name);
+    //  console.log(typeof  name);
+    //  console.log("=----------------");
+    //
+    //  name = 18;
+    //  console.log(name); //"18"
+    //  console.log(typeof  name); //string
+
+
+    var w=null;
+    //c.window对象中的open和close方法
+    document.getElementById('open1').onclick= function () {
+        w = window.open("https://www.baidu.com","_blank","width=200,height=200,left=100,top=100",true);
+    }
+    document.getElementById("close1").onclick = function () {
+        w.close(); //要关闭那个window窗口，就是那个window对象自己点close方法。
+    }
+
+    document.getElementById("killSelf").onclick = function (){
+        window.close();
+    }
+</script>
+</body>
+</html>

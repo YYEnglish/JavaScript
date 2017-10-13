@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<input type="button" value="按钮" id="btn"/>
+<div id="one"></div>
+<script>
+    var box=document.getElementById('one');
+    var btn=document.getElementById('btn');
+    var k=0;
+    function setText(ele,text){
+        if(typeof ele.textContent=="string"){
+            ele.textContent=text;
+        }else{
+            ele.innerText=text;
+        }
+    }
+    btn.onclick=function(){
+        // 添加单个标签
+        // k++;
+        // var div1 = document.createElement('div');
+        // div1.setAttribute('id',"one"+k);
+        // setText(div1,'我是第'+k+'个div');
+        // // div1.textContent='我是第'+k+'个div';
+        // document.body.appendChild(div1);
+
+
+        // 添加多个标签 
+        for(var i=0;i<6;i++){
+            k++;
+            var div1=document.createElement('div');
+            div1.setAttribute('id','one'+new Date().getTime());
+            setText(div1,'我是第'+k+'个div');
+            document.body.appendChild(div1);
+        }
+    }
+</script>
+</body>
+</html>

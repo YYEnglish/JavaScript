@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <input type="button" value="插入元素" id="btn"/>
+<ul id="ul1">
+  <li>我是第1个li标签</li>
+  <li>我是第2个li标签</li>
+  <li id="li3">我是第3个li标签</li>
+  <li>我是第4个li标签</li>
+  <li id="li5">我是第5个li标签</li>
+  <li>我是第6个li标签</li>
+</ul>
+
+<ul id="ul2">
+  <li>我是第1个li标签2</li>
+  <li>我是第2个li标签2</li>
+  <li id="li32">我是第3个li标签2</li>
+  <li>我是第4个li标签2</li>
+  <li>我是第5个li标签2</li>
+</ul>
+<script>
+    function id(id){
+        return document.getElementById(id);
+    }
+    function setText(ele,text){
+        if(typeof ele.textContext=='string'){
+            ele.textContent=text;
+        }else{
+            ele.innerText=text;
+        }
+    }
+    var ul1=id('ul1');
+    var li3=id('li3');
+    var li5=id('li5');
+    var li32=id('li32');
+    var btn=id('btn');
+
+    // 给按钮注册单击事件
+    btn.onclick=function(){
+        console.log('jsofh');
+        var linew=document.createElement('li');
+        setText(linew,"我是新创建的li标签");
+        // ul1.insertBefore(linew,li3);
+        // ul1.insertAfter(linew,li3);   //报错只能插前面
+        // ul1.insertBefore(li5,li3);
+        ul1.insertBefore(li32,li3);
+    }
+</script>
+</body>
+</html>

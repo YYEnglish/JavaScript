@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>标题</title>
+    <script>
+        //var box = document.getElementById("one");
+        //console.log(box);//null
+
+        //a.页面完全加载完毕后，才执行这个匿名函数里面的代码。
+        window.onload = function () {
+            var box = document.getElementById("one");
+            console.log(box);//null
+        }
+
+        //c.页面关闭之前 -
+        window.onbeforeunload = function () {
+            console.log("嘿嘿");
+        }
+
+
+        //b.页面关闭事件-页面关闭之前要处理的事情。
+        window.onunload = function () {
+            console.log("哈哈哈");
+        }
+
+
+
+    </script>
+</head>
+<body>
+<div id="one"></div>
+
+</body>
+</html>

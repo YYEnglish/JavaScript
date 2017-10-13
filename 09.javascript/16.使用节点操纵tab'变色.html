@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        ul {
+            float: left;
+            list-style: none;
+            margin-left: 200px;
+            margin-top: 200px;
+        }
+
+        li {
+            width: 60px;
+            height: 40px;
+            float: left;
+            border: 1px solid red;
+            text-align: center;
+            line-height: 40px;
+        }
+
+    </style>
+</head>
+<body>
+<ul id="ul1">
+    <li><a href="http://www.baidu.com">首页</a></li>
+    <li><a href="javascript:void(0);">博客</a></li>
+    <li><a href="#">关于</a></li>
+    <li><a href="#">帮助</a></li>
+</ul>
+<script src="common.js"></script>
+<script>
+    //1.获取元素
+    //如何获取a标签。先获取ul, 再获取ul的子元素们也就是li标签们。
+    var ul1 = document.getElementById("ul1");
+    var lis = ul1.children;
+
+   //for循环拿到每一个li标签
+    for(var i = 0 ; i < lis.length; i++){
+        //console.log(lis[i]);
+        //通过获取每一个li标签的第一个子元素节点，获取每一个a标签
+        //console.log(getFirstElementChild(lis[i]));
+
+        //给每一个a标签注册一个单击事件
+        var link = getFirstElementChild(lis[i]);
+        link.onclick = function () {
+            //排他，先让所有的li标签的颜色默认
+            var links = this.parentNode.parentNode.children; //获取所有的li标签
+            for(var j  = 0 ; j <links.length ; j++){
+            	links[j].style.backgroundColor = "";
+            }
+
+
+            //单击a，让他的父亲变色
+            this.parentNode.style.backgroundColor = "yellow";
+
+            //阻止a标签的跳转
+            return false;
+
+        }
+
+
+    }
+
+
+
+
+
+</script>
+</body>
+</html>

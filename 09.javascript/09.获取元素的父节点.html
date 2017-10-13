@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<ul>
+  <li>我是第1个li标签</li>
+  <li>我是第2个li标签</li>
+  <li id="li3">我是第3个li标签</li>
+  <li>我是第4个li标签</li>
+  <li>我是第5个li标签</li>
+</ul>
+<script>
+    var li3=document.getElementById('li3');
+    console.log(li3);
+
+    console.log(li3.parentNode);
+
+    console.log(li3.parentNode.parentNode);
+</script>
+</body>
+</html>
