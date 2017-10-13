@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+        //1.嵌套循环中遇到了break，break在那个循环里面，结束的就是那个循环。
+
+        //    for(var i = 0 ; i < 5; i++){
+//    	console.log("哈哈哈哈"+i);
+//        for(var j = 0 ; j < 4; j++){
+//        	console.log("嘿嘿嘿"+j);
+////            if(j == 2){
+////              break;
+////            }
+//        	console.log("嘿嘿嘿,,,,"+j);
+//        }
+//        if(i == 3){
+//          break;
+//        }
+//    	console.log("哈哈哈哈。。。。"+i);
+//    }
+
+    //2.在里层循环里面如果想要结束外层循环： 想办法在里层循环里面让外层循环的条件不成立。
+    for(var i = 0 ; i < 10; i++){
+    	for(var j = 0 ; j < 5; j++){
+    		//在这里写什么代码可以结束外层循环。
+            i = 10;
+            break;
+    	}
+    }
+</script>

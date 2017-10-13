@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+        //1.循环体可以写什么？只要是符合js语法要求的代码都可以。
+    //2.如果循环体中写循环，就是循环的嵌套。
+    /*
+    ******
+    ******
+    ******
+    ******
+    ******
+    ******
+    */
+    /*
+    3.每次输出只能输出一颗星（一行6个，共6行）
+    for(var i=0;i<6;i++){
+        for(var j=0;j<6;j++){
+            document.write('*');
+        }
+        document.write('<br>');
+    }
+*/
+/*
+    4.每次输出只能输出一颗星。
+    *
+    **
+    ***
+    ****
+    *****
+*/
+/*
+    for(var i=0;i<6;i++){
+        for(var j=0;i<6;j++){
+            document.write('*');
+            if(j==i){
+                break;
+            }
+        }
+        document.write('<br>');
+    }
+    */
+
+    // 九九乘法表
+    for(var i=1;i<=9;i++){
+        for(var j=1;j<=9;j++){
+            document.write(j+'*'+i+'='+(i*j)+'&nbsp;&nbsp;&nbsp;');
+            if(j==i){
+                break;
+            }
+        }
+        document.write('<br>');
+    }
+
+</script>

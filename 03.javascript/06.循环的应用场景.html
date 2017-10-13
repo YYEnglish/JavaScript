@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    // 循环的应用之六:求1堆数中的最大值和最小值
+    //eg: 请用户输入5个数, 将最大的那个数打印出来
+    var num;
+    var max=-Infinity;
+    for(var i=0;i<5;i++){
+        num=+prompt('请输入第'+(i+1)+'个数');
+        if(num>max){
+            max=num;
+        }
+    }
+    console.log(max);
+</script>
