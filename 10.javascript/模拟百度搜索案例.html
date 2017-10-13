@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-size: 20px;
+        }
+        .box {
+            width: 600px;
+            height: 40px;
+            margin: 200px auto;
+            position: relative;
+        }
+        #txt {
+            width: 498px;
+            height: 38px;
+            border: 1px solid #eee;
+            font-size: 20px;
+        }
+        #search {
+            width: 100px;
+            height: 40px;
+        }
+        #keywords {
+            position: absolute;
+            top: 40px;
+            left: 0;
+            background-color: rgb(12, 255, 24);
+            list-style: none;
+            width: 500px;;
+        }
+        li {
+            line-height: 24px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="top">
+            <input type="text" id="txt"/><input type="button" value="search" id="search"/>
+        </div>
+        <ul id="keywords"></ul>
+    </div>
+    <script>
+        var keywords = ["王宝强","王宝强的经纪人","王宝强的老婆","林丹出轨门","林丹夺冠","123","1234","2341","林丹的生平","JavaScript","Java","思聪"];
+        var list = document.getElementById("keywords");
+        document.getElementById("txt").onkeyup = function(){
+            if(list.hasChildNodes()){
+                list.innerHTML = "";
+            }
+            var temp = [];
+            for (var i = 0; i < keywords.length; i++) {
+                if (keywords[i].indexOf(this.value) == 0){
+                    temp.push(keywords[i]);
+                }
+            }
+            if (this.value.length == 0 || temp.length == 0){
+                list.innerHTML = "";
+                return;
+            }
+            for (var j = 0; j < temp.length; j++) {
+                var li = document.createElement("li");
+                li.innerHTML = temp[j];
+                list.appendChild(li);
+            }
+
+        }
+    </script>
+</body>
+</html>

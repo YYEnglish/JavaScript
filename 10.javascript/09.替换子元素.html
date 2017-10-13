@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <input type="button" id="btn" value="替换"/>
+<ul id="ul1">
+  <li>我是第1个li标签</li>
+  <li>我是第2个li标签</li>
+  <li id="li3">我是第3个li标签</li>
+  <li>我是第4个li标签</li>
+  <li id="li5">我是第5个li标签</li>
+  <li>我是第6个li标签</li>
+</ul>
+
+<ul id="ul2">
+  <li>我是第1个li标签2</li>
+  <li>我是第2个li标签2</li>
+  <li id="li32">我是第3个li标签2</li>
+  <li>我是第4个li标签2</li>
+  <li>我是第5个li标签2</li>
+</ul>
+<script>
+      //1.获取元素
+  var btn = document.getElementById("btn");
+  var ul1 = document.getElementById("ul1");
+  var li3 = document.getElementById("li3");
+  var li5 = document.getElementById("li5");
+  var li32 = document.getElementById("li32");
+
+  //2.给按钮注册单击事件
+  btn.onclick = function () {
+    //替换ul1中的某一个li标签  替换那个标签的父节点.replaceChild(新元素，老元素);
+
+    //a.新建一个li标签，替换ul1中的id为li3这个标签
+    //var liNew = document.createElement("li");
+    //setText(liNew,"我是新创建的li标签");
+    //ul1.replaceChild(liNew,li3); //把原来的标签给覆盖掉了。
+
+
+    //b.找到ul1中的某一个标签，替换当前ul1中的li3这个标签
+    //ul1.replaceChild(li5,li3); //把li5剪切过来覆盖li3.
+
+
+    //c.把另外的ul中的li标签 替换 当前这个ul1中的li3标签。
+    //ul1.replaceChild(li32,li3); //把li32这个标签剪切过来覆盖li3
+
+  }
+
+</script>
+</body>
+</html>

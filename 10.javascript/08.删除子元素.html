@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <input type="button" id="btn" value="删除"/>
+<ul id="ul1">
+  <li>我是第1个li标签</li>
+  <li>我是第2个li标签</li>
+  <li id="li3">我是第3个li标签</li>
+  <li>我是第4个li标签</li>
+  <li>我是第5个li标签</li>
+</ul>
+
+<ul id="ul2">
+  <li>我是第1个li标签2</li>
+  <li>我是第2个li标签2</li>
+  <li id="li32">我是第3个li标签2</li>
+  <li>我是第4个li标签2</li>
+  <li>我是第5个li标签2</li>
+</ul>
+<script>
+  var btn = document.getElementById("btn");
+  var ul1 = document.getElementById("ul1");
+  var li3 = document.getElementById("li3");
+  var li32 = document.getElementById("li32");
+  btn.onclick=function (){
+          //就是要删除子元素
+    //你要删除的那个元素的父元素.removeChild(需要被删除的那个元素);
+    //a.删除ul1中存在的li3这个li标签。
+    // ul1.removeChild(li3);
+
+
+    //b.如果要删掉一个不属于自己的子节点，会报错。
+    //ul1.removeChild(li32);
+  }
+
+     //d.每次点击按钮都是删除ul最后一个子元素
+     var lis = ul1.children;
+    if(lis.length != 0){
+      ul1.removeChild(lis[lis.length-1]);  //
+    }
+
+
+  }
+</script>
+</body>
+</html>

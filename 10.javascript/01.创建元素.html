@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+      <style>
+    div {
+      width: 100px;
+      height: 100px;
+      background-color: pink;
+    }
+  </style>
+
+</head>
+<body>
+<div class="one" id="box">哈哈哈</div>
+<input type="button" value="按钮" id="btn"/>
+<script>
+    //创建元素
+    //1.document.write();
+    //document.write("<div>我是一个div</div>");
+    //document.write("<ul><li>1</li><li>2</li><li>3</li></ul>");
+    //慎用，一部小心就会覆盖掉原来页面上的内容。
+    //页面的内容渲染完毕，会关闭标准流，document.write会调用document.open()方法重新打开标准流，用document.write括号中的内容替换标准流中的内容，然后再调用document.close()方法关闭标准流。
+    //var btn = document.getElementById("btn");
+    //btn.onclick = function () {
+    //  document.write("你看看我做了什么");
+    //}
+
+
+      //2.innerHTML  往指定的元素中以内容的方式添加标签。
+    //   var box=document.getElementById('box');
+    //     box.innerHTML="<p>我是一个p</p>";
+    //     box.innerHTML = "<ul><li>1</li><li>2</li><li>3</li></ul>";
+        
+
+//           var str = "<ul>"
+//   for(var i = 0 ; i < 5; i++){
+//   	str += "<li>"+i+"</li>"
+//   }
+//   str += "</ul>";
+//   box.innerHTML = str;
+//   document.body.innerHTML = "<div>嘿嘿</div>";
+
+
+// function getText(ele){
+//     if(typeof ele.textContent=='string'){
+//         return ele.textContent;
+//     }else{
+//         return ele.innerTEXT;
+//     }
+// }
+function setText(ele,text){
+  if(typeof ele.teztContent=='string'){
+    ele.textContent=text;
+  }else{
+    ele.innerText=text;
+  }
+}
+var div1=document.createElement('div');
+div1.setAttribute('id','div1');
+setText(div1,"我是通过document.createElement()创建出来的新元素");
+document.body.appendChild(div1);
+</script>
+</body>
+</html>
